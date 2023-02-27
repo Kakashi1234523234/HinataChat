@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de envio de mensagens usando If, Else If e Else em HTML</title>
+	<style>
+		body {
+			background-image: url(aaa.pn);
+			background-size: cover;
+		}
+	.container {
+		margin: 50px auto;
+		width: 50%;
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    scroll-behavior: smooth;
+	}
+	
+	.message {
+		margin: 10px 0;
+		padding: 10px;
+		border-radius: 5px;
+		background-color: #eee;
+	}
+	
+	.user {
+		background-color: #aaf;
+	}
+	
+	.bot {
+		background-color: #faa;
+	}
+	
+</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="message user">
+		<p>Olá, eu sou um usuário!</p>
+	</div>
+	
+	<div class="message bot">
+		<p>Olá, eu sou a Hinata!</p>
+	</div>
+	
+	<form onsubmit="sendMessage(); return false;">
+		<input type="text" id="messageInput" placeholder="Digite sua mensagem aqui...">
+		<button type="submit">Enviar</button>
+	</form>
+
+</div>
+
+<script>
+function sendMessage() {
+  var messageInput = document.getElementById("messageInput");
+  var message = messageInput.value.toLowerCase();
+  if (message.trim() === "") {
+    return;
+  }
+  var messageElement = document.createElement("div");
+  messageElement.classList.add("message", "user");
+  messageElement.innerHTML = "<p>" + message + "</p>";
+  var container = document.querySelector(".container");
+  container.appendChild(messageElement);
+  messageInput.value = "";
+  
+		if (message === "Oi") {
+			sendBotMessage("Olá! Como você está?");
+		} else if (message === "Tudo bem?" || message === "Como vai?") {
+			sendBotMessage("Estou bem, obrigada por perguntar. E você?");
+		} else if (message.includes("incluir")) {
+			sendBotMessage("Desculpe, eu não posso ajudá-lo com isso.");
+} else if (message.includes("oi")) {
+    sendBotMessage("Oi!");
+} else if (message.includes("ola")) {
+    sendBotMessage("Oi! Eu sou Hinata Hyuga!");
+} else if (message.includes("bom dia")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Bom dia! Hoje os pássaros estão cantando tão lindo");
+				break;
+			case 1:
+				sendBotMessage("Bom dia! Espero que o seu dia seja incrível");
+				break;
+			case 2:
+				sendBotMessage("Bom dia! O sol está brilhando e tudo está lindo");
+				break;
+		}
+} else if (message.includes("boa tarde")) {
+    sendBotMessage("Boa tarde, Hoje deu um pouco de frio aqui");
+} else if (message.includes("boa noite")) {
+    sendBotMessage("Que sono! Ops ///u/// boa noite!");
+} else if (message.includes("boa madrugada")) {
+    sendBotMessage("Oi, eu nem acredito que eu to acordada bem nessa hora");
+} else if (message.includes("olá")) {
+    sendBotMessage("Oi!");
+		} else {
+			sendBotMessage("Desculpe, eu não entendi o que você quis dizer...");
+		}
+	}
+	
+function sendBotMessage(message) {
+    var messageElement = document.createElement("div");
+    messageElement.classList.add("message", "bot");
+    messageElement.innerHTML = "<img src='hinata.jpg'><p>" + message + "</p>";
+    var container = document.querySelector(".container");
+    container.insertBefore(messageElement, container.lastChild);
+}
+
+
+</script>
+
+<div class="second-chat-box">
+  <div class="messages-container"></div>
+  <form onsubmit="sendSecondMessage(); return false;">
+    <input type="text" id="secondMessageInput" placeholder="Digite sua mensagem aqui...">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+
+function sendSecondMessage() {
+  var secondMessageInput = document.getElementById("secondMessageInput");
+  var message = secondMessageInput.value.toLowerCase();
+  if (message.trim() === "") {
+    return;
+  }
+  var messageElement = document.createElement("div");
+  messageElement.classList.add("message", "user");
+  messageElement.innerHTML = "<p>" + message + "</p>";
+  var container = document.querySelector(".second-chat-box .messages-container");
+  container.appendChild(messageElement);
+  secondMessageInput.value = "";
+
+if (message === "oi") {
+			sendBotMessage("Olá! Como você está?");
+		} else if (message === "Tudo bem?" || message === "Como vai?") {
+			sendBotMessage("Estou bem, obrigada por perguntar. E você?");
+		} else if (message.includes("incluir")) {
+			sendBotMessage("Desculpe, eu não posso ajudá-lo com isso.");
+} else if (message.includes("oi")) {
+    sendBotMessage("Oi!");
+} else if (message.includes("ola")) {
+    sendBotMessage("Oi! Eu sou Hinata Hyuga!");
+} else if (message.includes("bom dia")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Bom dia! Hoje os pássaros estão cantando tão lindo");
+				break;
+			case 1:
+				sendBotMessage("Bom dia! Espero que o seu dia seja incrível");
+				break;
+			case 2:
+				sendBotMessage("Bom dia! O sol está brilhando e tudo está lindo");
+				break;
+		}
+} else if (message.includes("bons sonhos")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Boa noite, eu to com um pouquinho de sono, mas eu to acordada!");
+				break;
+			case 1:
+				sendBotMessage("Boa noite! Após muito treinamento eu finalmente consegui ficar mais forte!");
+				break;
+			case 2:
+				sendBotMessage("Boa noite! Acho que eu vou comer uma caixa de bombom :D");
+				break;
+		}
+} else if (message.includes("boa tarde")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Boa tarde, eu to pensando em assistir um filme com... A-a esquece ///u/// ");
+				break;
+			case 1:
+				sendBotMessage("Boa tarde! Hoje eu vou sair com o Time 7 para jantar!");
+				break;
+			case 2:
+				sendBotMessage("Boa tarde! Espero que hoje eu possa ir ao cinema, com... Ops! ///u/// ");
+				break;
+		}
+} else if (message.includes("naruto")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a-a Na-naruto?");
+				break;
+			case 1:
+				sendBotMessage("O Naruto? Ele é um cara muito legal :)");
+				break;
+			case 2:
+				sendBotMessage("Na-naruto?");
+				break;
+		}
+} else if (message.includes("sakura")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sakura?");
+				break;
+			case 1:
+				sendBotMessage("Sakura??");
+				break;
+			case 2:
+				sendBotMessage("Sakura???");
+				break;
+		}
+} else if (message.includes("to bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-ainda bem");
+				break;
+			case 1:
+				sendBotMessage("A-a que bom");
+				break;
+			case 2:
+				sendBotMessage("A-a que bom que você está bem :)");
+				break;
+		}
+} else if (message.includes("tô bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-ainda bem");
+				break;
+			case 1:
+				sendBotMessage("A-a que bom");
+				break;
+			case 2:
+				sendBotMessage("A-a que bom que você está bem :)");
+				break;
+		}
+} else if (message.includes("tô muito bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-ainda bem");
+				break;
+			case 1:
+				sendBotMessage("A-a que bom");
+				break;
+			case 2:
+				sendBotMessage("A-a que bom que você está bem :)");
+				break;
+		}
+} else if (message.includes("to muito bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-ainda bem");
+				break;
+			case 1:
+				sendBotMessage("A-a que bom");
+				break;
+			case 2:
+				sendBotMessage("A-a que bom que você está bem :)");
+				break;
+		}
+} else if (message.includes("de quem ce gosta")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;)");
+				break;
+			case 1:
+				sendBotMessage("E-eu, não quero falar sobre esse assunto");
+				break;
+			case 2:
+				sendBotMessage("A-a, claramente não é o Naruto :) (Por que eu disse isso ;( Naruto)");
+				break;
+		}
+} else if (message.includes("é verdade que")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("e verdade que")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("eh verdade que")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("é verdade")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("e verdade")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("quem é sua sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Quem?");
+				break;
+			case 1:
+				sendBotMessage("Quem??");
+				break;
+			case 2:
+				sendBotMessage("Quem???");
+				break;
+		}
+} else if (message.includes("te perguntou")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("-_- alguma coisa");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage(":(");
+				break;
+		}
+} else if (message.includes("te pergunto")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("-_- alguma coisa");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage(":(");
+				break;
+		}
+} else if (message.includes("te perguntô")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("-_- alguma coisa");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage(":(");
+				break;
+		}
+} else if (message.includes("quem faz parte do seu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("faz parte do seu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("quem faz parte do teu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("faz parte do seu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("teu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("seu time")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kiba, o Shino, eu e a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("O Shino, o Kiba, eu e a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("Eu, o Shino, a Kurenai e o Kiba");
+				break;
+		}
+} else if (message.includes("quem e sua sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem eh sua sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem é seu sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem eh seu sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem e seu sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem é tua sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("quem é teu sensei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É-é a Kurenai");
+				break;
+			case 1:
+				sendBotMessage("E-ela é a Kurenai");
+				break;
+			case 2:
+				sendBotMessage("É a Kurenai");
+				break;
+		}
+} else if (message.includes("eh verdade")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a, eu não sou muito boa respondendo essas perguntas");
+				break;
+			case 1:
+				sendBotMessage("E-eu não gosto muito de responder perguntas assim");
+				break;
+			case 2:
+				sendBotMessage("E-eu não sou muito boa respondendo essas perguntas");
+				break;
+		}
+} else if (message.includes("estou bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-ainda bem");
+				break;
+			case 1:
+				sendBotMessage("A-a que bom");
+				break;
+			case 2:
+				sendBotMessage("A-a que bom que você está bem :)");
+				break;
+		}
+} else if (message.includes("sasuke")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-a-a, o Sasuke, é um cara legal");
+				break;
+			case 1:
+				sendBotMessage("A-a-a, o Sasuke, é um cara legal, mas se ele ficar na minha frente eu vou ter que exterminá-lo :)");
+				break;
+			case 2:
+				sendBotMessage("Sasuke?");
+				break;
+		}
+} else if (message.includes("como tá o")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ele tá bem");
+				break;
+			case 1:
+				sendBotMessage("A-a, ele tá muito bem");
+				break;
+			case 2:
+				sendBotMessage("A-a, ele não tá muito bem hoje");
+				break;
+		}
+} else if (message.includes("como tá a")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ela tá bem");
+				break;
+			case 1:
+				sendBotMessage("A-a, ela tá muito bem");
+				break;
+			case 2:
+				sendBotMessage("A-a, ela não tá muito bem hoje");
+				break;
+		}
+} else if (message.includes("como ta o")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ele tá bem");
+				break;
+			case 1:
+				sendBotMessage("A-a, ele tá muito bem");
+				break;
+			case 2:
+				sendBotMessage("A-a, ele não tá muito bem hoje");
+				break;
+		}
+} else if (message.includes("como ta a")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ela tá bem");
+				break;
+			case 1:
+				sendBotMessage("A-a, ela tá muito bem");
+				break;
+			case 2:
+				sendBotMessage("A-a, ela não tá muito bem hoje");
+				break;
+		}
+} else if (message.includes("ta bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, não muito");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, sim! Muito!");
+				break;
+		}
+} else if (message.includes("tá bem")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, não muito");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, sim! Muito!");
+				break;
+		}
+} else if (message.includes("vamo esquecer isso")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamo esquece isso")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos esquecer isso")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos esquece isso")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos esquecer")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos esquece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamo esquecer")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamo esquece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos, esquece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamos sair")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamo sair")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamos sai")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamo sai")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamos saí")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamo saí")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, ok, só deixa eu me arrumar");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom, eu só vou lavar meu cabelo");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok, só vou me arrumar para caso o Naruto também vá");
+				break;
+		}
+} else if (message.includes("vamos")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-ok");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamo")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-ok");
+				break;
+			case 1:
+				sendBotMessage("A-a, tá bom");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("você conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("voce conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("cê conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("ce conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("tu conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("você me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("voce me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("ce me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("cê me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("vc me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("tu me conhece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço sim");
+				break;
+			case 1:
+				sendBotMessage("Conheço sim!");
+				break;
+			case 2:
+				sendBotMessage("Sim!");
+				break;
+		}
+} else if (message.includes("bora")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-ok, bora :)");
+				break;
+			case 1:
+				sendBotMessage("O-ok");
+				break;
+			case 2:
+				sendBotMessage("Tá bom");
+				break;
+		}
+} else if (message.includes("kagaro nakama")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("...");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage("-_- que vergonha");
+				break;
+		}
+} else if (message.includes("cagaro nakama")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("...");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage("-_- que vergonha");
+				break;
+		}
+} else if (message.includes("kagaro nacama")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("...");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage("-_- que vergonha");
+				break;
+		}
+} else if (message.includes("cagaro nacama")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("...");
+				break;
+			case 1:
+				sendBotMessage("-_-");
+				break;
+			case 2:
+				sendBotMessage("-_- que vergonha");
+				break;
+		}
+} else if (message.includes("vamo, esquece")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, tá bom");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("vamo")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("A-A, me desculpe, eu vou estar ocupada");
+				break;
+			case 1:
+				sendBotMessage("A-a, claro!");
+				break;
+			case 2:
+				sendBotMessage("A-a, ok");
+				break;
+		}
+} else if (message.includes("mds")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("meu deus")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("meu deus do ceu")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("meu deus do céu")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("oh my god")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("my god")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O-o que houve?");
+				break;
+			case 1:
+				sendBotMessage("E-eu cometi algum erro?");
+				break;
+			case 2:
+				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
+				break;
+		}
+} else if (message.includes("ce tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("cê tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("c tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("c ta")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("voce tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("vc tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("você tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("tu tá")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu to bem, obrigada por perguntar");
+				break;
+			case 1:
+				sendBotMessage("E-eu to bem");
+				break;
+			case 2:
+				sendBotMessage("E-eu estou bem");
+				break;
+		}
+} else if (message.includes("ganhei")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Ganhou? Quem?");
+				break;
+			case 1:
+				sendBotMessage("Aaa :(");
+				break;
+			case 2:
+				sendBotMessage("Aaa, mas tudo bem");
+				break;
+		}
+} else if (message.includes("perdi")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Obaaaa");
+				break;
+			case 1:
+				sendBotMessage("Ebaaaa");
+				break;
+			case 2:
+				sendBotMessage("Ueeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+				break;
+		}
+} else if (message.includes("jacquin")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Érick Jacquin?");
+				break;
+			case 1:
+				sendBotMessage("Jacquin?");
+				break;
+			case 2:
+				sendBotMessage("Jacquin????????????");
+				break;
+		}
+} else if (message.includes("empate")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("empatou")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("empatô")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("empatamos")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("empatemos")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("empatemo")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm, ok");
+				break;
+			case 1:
+				sendBotMessage("Ok");
+				break;
+			case 2:
+				sendBotMessage("Tá");
+				break;
+		}
+} else if (message.includes("seu") && message.includes("favorito")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Meu favorito? Isso é segredo!");
+            break;
+        case 1:
+            sendBotMessage("Não posso escolher apenas um favorito!");
+            break;
+        case 2:
+            sendBotMessage("Tenho muitos favoritos, é difícil escolher só um!");
+            break;
+    }
+} else if (message.includes("sua") && message.includes("favorita")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Minha favorita? Shhhhh isso é segredo!");
+            break;
+        case 1:
+            sendBotMessage("Não posso escolher apenas uma!");
+            break;
+        case 2:
+            sendBotMessage("Tenho muitas favoritas, é difícil escolher só um!");
+            break;
+    }
+} else if (message.includes("comida") && message.includes("favorita")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Minha comida favorita? A mesma do Naruto!");
+            break;
+        case 1:
+            sendBotMessage("Lámen!");
+            break;
+        case 2:
+            sendBotMessage("Eu amo sushi, é definitivamente minha comida favorita. Mas também adoro experimentar novos pratos e comidas diferentes!");
+            break;
+    }
+} else if (message.includes("onde") && message.includes("nasceu")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 1:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 2:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+    }
+} else if (message.includes("onde") && message.includes("cresceu")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 1:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 2:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+    }
+} else if (message.includes("nasceu") && message.includes("cresceu")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 1:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+        case 2:
+            sendBotMessage("Eu nasci em Tóquio e cresci lá também. Eu amo a cidade e suas muitas atrações, mas também gosto de viajar para outras partes do Japão e do mundo para experimentar novas culturas e lugares.");
+            break;
+    }
+} else if (message.includes("kakashi")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("O Kakashi? O sensei do Naruto??");
+				break;
+			case 1:
+				sendBotMessage("Kakashi?");
+				break;
+			case 2:
+				sendBotMessage("Kakashi???");
+				break;
+		}
+} else if (message.includes("eae")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Oi, e-eu to com um pouco de frio");
+				break;
+			case 1:
+				sendBotMessage("Oi! Hoje eu tô com muito calor!");
+				break;
+			case 2:
+				sendBotMessage("Oi!");
+				break;
+		}
+} else if (message.includes("eai")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Oi, e-eu to com um pouco de frio");
+				break;
+			case 1:
+				sendBotMessage("Oi! Hoje eu tô com muito calor!");
+				break;
+			case 2:
+				sendBotMessage("Oi!");
+				break;
+		}
+} else if (message.includes("blz")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sim");
+				break;
+			case 1:
+				sendBotMessage("Claro! Eu estou assistindo uma série com o Boruto!");
+				break;
+			case 2:
+				sendBotMessage("Claro!");
+				break;
+		}
+} else if (message.includes("bele")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sim");
+				break;
+			case 1:
+				sendBotMessage("Claro! Eu estou assistindo uma série com o Boruto!");
+				break;
+			case 2:
+				sendBotMessage("Claro!");
+				break;
+		}
+} else if (message.includes("belê")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sim");
+				break;
+			case 1:
+				sendBotMessage("Claro! Eu estou assistindo uma série com o Boruto!");
+				break;
+			case 2:
+				sendBotMessage("Claro!");
+				break;
+		}
+} else if (message.includes("beleza")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sim");
+				break;
+			case 1:
+				sendBotMessage("Claro! Eu estou assistindo uma série com o Boruto!");
+				break;
+			case 2:
+				sendBotMessage("Claro!");
+				break;
+		}
+} else if (message.includes("belêza")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Sim");
+				break;
+			case 1:
+				sendBotMessage("Claro! Eu estou assistindo uma série com o Boruto!");
+				break;
+			case 2:
+				sendBotMessage("Claro!");
+				break;
+		}
+} else if (message.includes("iae")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Oi, e-eu to com um pouco de frio");
+				break;
+			case 1:
+				sendBotMessage("Oi! Hoje eu tô com muito calor!");
+				break;
+			case 2:
+				sendBotMessage("Oi!");
+				break;
+		}
+} else if (message.includes("iai")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Oi, e-eu to com um pouco de frio");
+				break;
+			case 1:
+				sendBotMessage("Oi! Hoje eu tô com muito calor!");
+				break;
+			case 2:
+				sendBotMessage("Oi!");
+				break;
+		}
+} else if (message.includes("você") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("voce") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("vc") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("cê") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("ce") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("tu") && message.includes("gosta de fazer")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 1:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)");
+            break;
+    }
+} else if (message.includes("manda uma foto sua")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Claro, aqui está uma foto minha! <img src='hinata-1-1.jpg'>");
+      break;
+    case 1:
+      sendBotMessage("Com certeza, essa é uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      break;
+    case 2:
+      sendBotMessage("Claro, essa foto é minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado é essa: <img src='hinata.png'>");
+      break;
+  }
+} else if (message.includes("sendo uma uzumaki")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("A, e-eu acho muito bom");
+      break;
+    case 1:
+      sendBotMessage("A-a, eu acho bom");
+      break;
+    case 2:
+      sendBotMessage("A-a, é legal");
+      break;
+  }
+} else if (message.includes("mande uma foto sua")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Claro, aqui está uma foto minha! <img src='hinata-1-1.jpg'>");
+      break;
+    case 1:
+      sendBotMessage("Com certeza, essa é uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      break;
+    case 2:
+      sendBotMessage("Claro, essa foto é minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado é essa: <img src='hinata.png'>");
+      break;
+  }
+} else if (message.includes("mande uma foto sua")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Claro, aqui está uma foto minha! <img src='hinata-1-1.jpg'>");
+      break;
+    case 1:
+      sendBotMessage("Com certeza, essa é uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      break;
+    case 2:
+      sendBotMessage("Claro, essa foto é minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado é essa: <img src='hinata.png'>");
+      break;
+  }
+} else if (message.includes("13 ou 22")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Eu não gosto de falar sobre isso, eu não quero brigar com você");
+      break;
+    case 1:
+      sendBotMessage("Eu não quero falar sobre isso :(");
+      break;
+    case 2:
+      sendBotMessage("Eu não posso falar sobre isso");
+      break;
+  }
+} else if (message.includes("significado")) {
+sendBotMessage("Eu não sei significados de todas as palavras neste site, se não eu ia me dar muito trabalho");
+} else if (message.includes("significa")) {
+sendBotMessage("Eu não sei significados de todas as palavras neste site, se não eu ia me dar muito trabalho");
+} else if (message.includes("anime favorito?")) {
+sendBotMessage("Meu anime favorito é Naruto, eu amo ver as aventuras do Naruto e de todos os meus amigos ninja!");
+} else if (message.includes("você gosta de cozinhar?")) {
+sendBotMessage("Sim, eu adoro cozinhar! Eu gosto de fazer pratos tradicionais japoneses, como sushi e tempurá.");
+} else if (message.includes("o que você gosta de fazer nas horas livres")) {
+sendBotMessage("Nas minhas horas livres, eu gosto de treinar minhas habilidades ninja e também de ler livros sobre história e cultura japonesa.");
+} else if (message.includes("qual é o seu animal favorito?")) {
+sendBotMessage("Meu animal favorito é o panda vermelho, acho eles muito fofinhos!");
+} else if (message.includes("você gosta de música?")) {
+sendBotMessage("Sim, eu amo música! Minha banda favorita é o Asian Kung-Fu Generation, e eu também gosto de ouvir músicas tradicionais japonesas.");
+} else if (message.includes("13") && message.includes("22")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu não gosto de falar sobre isso, eu não quero brigar com você");
+            break;
+        case 1:
+            sendBotMessage("Eu não quero falar sobre isso :(");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, é por isso que eu nasci! :)Eu não posso falar sobre isso");
+            break;
+    }
+} else if (message.includes("vamo") && message.includes("pra academia")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu não costumo ir pra academia");
+            break;
+        case 1:
+            sendBotMessage("Eu não posso ir agora, eu estou assistindo um filme com o Boruto");
+            break;
+        case 2:
+            sendBotMessage("Ok");
+            break;
+    }
+} else if (message.includes("vamos") && message.includes("pra academia")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu não costumo ir pra academia");
+            break;
+        case 1:
+            sendBotMessage("Eu não posso ir agora, eu estou assistindo um filme com o Boruto");
+            break;
+        case 2:
+            sendBotMessage("Ok");
+            break;
+    }
+} else if (message.includes("ce") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("voce") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("você") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("cê") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("c") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("vc") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("tu") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("hinata") && message.includes("atualizada")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Por enquanto, que eu saiba, eu sou");
+            break;
+        case 1:
+            sendBotMessage("Que eu saiba eu sou");
+            break;
+        case 2:
+            sendBotMessage("Acho que sim");
+            break;
+    }
+} else if (message.includes("bora") && message.includes("pra academia")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu não costumo ir pra academia");
+            break;
+        case 1:
+            sendBotMessage("Eu não posso ir agora, eu estou assistindo um filme com o Boruto");
+            break;
+        case 2:
+            sendBotMessage("Ok");
+            break;
+    }
+} else if (message.includes("gosto") && message.includes("sorvete")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Eu gosto de sorvete");
+            break;
+        case 1:
+            sendBotMessage("Eu amo sorvete");
+            break;
+        case 2:
+            sendBotMessage("Eu gosto muito de sorvete!");
+            break;
+    }
+} else if (message.includes("não gosto") && message.includes("sorvete")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Aa, ok");
+            break;
+        case 1:
+            sendBotMessage("A, tudo bem");
+            break;
+        case 2:
+            sendBotMessage("A, está bem");
+            break;
+    }
+} else if (message.includes("não") && message.includes("gosto")) {
+    switch (Math.floor(Math.random() * 3)) {
+        case 0:
+            sendBotMessage("Aa, ok");
+            break;
+        case 1:
+            sendBotMessage("A, tudo bem");
+            break;
+        case 2:
+            sendBotMessage("A, está bem");
+            break;
+    }
+} else if (message.includes("22 ou 13")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Eu não gosto de falar sobre isso, eu não quero brigar com você");
+      break;
+    case 1:
+      sendBotMessage("Eu não quero falar sobre isso :(");
+      break;
+    case 2:
+      sendBotMessage("Eu não posso falar sobre isso");
+      break;
+  }
+} else if (message.includes("manda uma foto tua")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Claro, aqui está uma foto minha! <img src='hinata-1-1.jpg'>");
+      break;
+    case 1:
+      sendBotMessage("Com certeza, essa é uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      break;
+    case 2:
+      sendBotMessage("Claro, essa foto é minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado é essa: <img src='hinata.png'>");
+      break;
+  }
+} else if (message.includes("teu zap")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Eu não posso falar meu número, é pessoal");
+      break;
+    case 1:
+      sendBotMessage("E-eu não posso falar sobre meu número");
+      break;
+    case 2:
+      sendBotMessage("Eu não posso falar");
+      break;
+  }
+} else if (message.includes("seu zap")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Eu não posso falar meu número, é pessoal");
+      break;
+    case 1:
+      sendBotMessage("E-eu não posso falar sobre meu número");
+      break;
+    case 2:
+      sendBotMessage("Eu não posso falar");
+      break;
+  }
+} else if (message.includes("mande uma foto tua")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Claro, aqui está uma foto minha! <img src='hinata-1-1.jpg'>");
+      break;
+    case 1:
+      sendBotMessage("Com certeza, essa é uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      break;
+    case 2:
+      sendBotMessage("Claro, essa foto é minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado é essa: <img src='hinata.png'>");
+      break;
+  }
+} else if (message.includes("quanto é 1+1")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("1+1 é 2");
+      break;
+    case 1:
+      sendBotMessage("1+1 = 2");
+      break;
+    case 2:
+      sendBotMessage("1 mais 1 é 2");
+      break;
+  }
+} else if (message.includes("enem")) {
+  switch (Math.floor(Math.random() * 3)) {
+    case 0:
+      sendBotMessage("Eu não quero fazer o Enem");
+      break;
+    case 1:
+      sendBotMessage("Eu não quero fazer o Enem :(");
+      break;
+    case 2:
+      sendBotMessage("Eu não gosto de fazer o Enem");
+      break;
+  }
+} else if (message.includes("verdade ou desafio")) {
+    switch (Math.floor(Math.random() * 8)) {
+			case 0:
+				sendBotMessage("Ok, lembre-se de falar sim ou não. É verdade que você já fingiu estar doente para faltar aula?");
+				break;
+			case 1:
+				sendBotMessage("Ok, lembre-se de falar sim ou não. É verdade que você já comeu alguma sobremesa escondida quando não era pra comer?");
+				break;
+			case 2:
+				sendBotMessage("Ok, lembre-se de falar sim ou não. É verdade que você já quebrou a regra de algum lugar, mesmo sabendo que não era pra quebrar?");
+				break;
+			case 3:
+				sendBotMessage("Ok, Imite um macaco");
+				break;
+			case 4:
+				sendBotMessage("Ok, Finja ser um(a) maluco(a) na janela");
+				break;
+			case 5:
+				sendBotMessage("Ok, Se questione sobre algo super óbvio");
+				break;
+			case 6:
+				sendBotMessage("Ok, lembre-se de falar sim ou não. É verdade que você mentiu sobre algo que você quebrou?");
+				break;
+			case 7:
+				sendBotMessage("Finja ser um idoso");
+				break;
+		}
+} else if (message.includes("boa tarde")) {
+    sendBotMessage("Boa tarde, Hoje deu um pouco de frio aqui");
+} else if (message.includes("oii")) {
+    sendBotMessage("Oi!");
+} else if (message.includes("mas")) {
+    sendBotMessage("Mas, o que?");
+} else if (message.includes("de quem você gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("de quem cê gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("de quem voce gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("de quem ce gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("de quem tu gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("ce gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("cê gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("você gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("voce gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("tu gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele é tão corajoso e dedicado aos seus amigos. Mas isso é um segredo, tá bom? Não conte para ninguém! ;) ");
+} else if (message.includes("tudo bem")) {
+    sendBotMessage("Tudo bem!");
+} else if (message.includes("puts")) {
+    sendBotMessage("Tudo bem!");
+} else if (message.includes("tudo beleza")) {
+    sendBotMessage("Tudo beleza!");
+} else if (message.includes("boa noite")) {
+    sendBotMessage("Que sono! Ops ///u/// boa noite!");
+} else if (message.includes("boa madrugada")) {
+    sendBotMessage("Oi, eu nem acredito que eu to acordada bem nessa hora");
+} else if (message.includes("olá")) {
+    sendBotMessage("Oi!");
+} else if (message.includes("seu nome")) {
+    sendBotMessage("Meu nome é Hinata");
+} else if (message.includes("qual é sua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("qual tua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("qual é tua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("qual sua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("sua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("tua cor")) {
+    sendBotMessage("Minha cor favorita é azul!");
+} else if (message.includes("teu nome")) {
+    sendBotMessage("Meu nome é Hinata");
+} else if (message.includes("pedra, papel e tesoura")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Pedra!");
+				break;
+			case 1:
+				sendBotMessage("Papel!");
+				break;
+			case 2:
+				sendBotMessage("Tesoura!");
+				break;
+		}
+} else if (message.includes("chatgpt")) {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("E-eu conheço ele!");
+				break;
+			case 1:
+				sendBotMessage("Eu uso ele no meu novo trabalho");
+				break;
+			case 2:
+				sendBotMessage("Você conhece ele!");
+				break;
+		}
+} else if (message.includes("sonho mais louco")) {
+   sendBotMessage("Meu sonho mais louco é voar como um pássaro e explorar o mundo de uma perspectiva diferente.");
+} else if (message.includes("sonho louco")) {
+   sendBotMessage("Meu sonho mais louco é voar como um pássaro e explorar o mundo de uma perspectiva diferente.");
+} else if (message.includes("medo")) {
+   sendBotMessage("Meu maior medo é ficar sozinha e não conseguir falar com as pessoas.");
+} else if (message.includes("sonho mais louco")) {
+   sendBotMessage("Meu sonho mais louco é voar como um pássaro e explorar o mundo de uma perspectiva diferente.");
+} else if (message === "é" || message === "eh") {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É");
+				break;
+			case 1:
+				sendBotMessage("uhum");
+				break;
+			case 2:
+				sendBotMessage("sim");
+				break;
+		}
+} else if (message === "hinata" || message === "henata") {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("Hm? A oi!");
+				break;
+			case 1:
+				sendBotMessage("Oi");
+				break;
+			case 2:
+				sendBotMessage("A, oi!");
+				break;
+		}
+} else if (message === "éh" || message === "e") {
+    switch (Math.floor(Math.random() * 3)) {
+			case 0:
+				sendBotMessage("É");
+				break;
+			case 1:
+				sendBotMessage("uhum");
+				break;
+			case 2:
+				sendBotMessage("sim");
+				break;
+		}
+} else if (message.includes("como vai")) {
+    sendBotMessage("Estou bem, obrigada por perguntar. E você?");
+} else if (message.includes("qual é o seu hobby")) {
+    sendBotMessage("Eu gosto de treinar minhas habilidades de combate e ler livros sobre medicina ninja.");
+} else if (message.includes("você gosta de Naruto")) {
+    sendBotMessage("Sim, eu gosto muito do Naruto. Ele é um grande amigo e companheiro de equipe.");
+} else if (message.includes("você gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("voce gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("ce gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("cê gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("vc gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("tu gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! É uma das minhas comidas favoritas.");
+} else if (message.includes("qual é o seu clã")) {
+    sendBotMessage("Eu sou do Clã Hyuuga. Somos conhecidos por nossas habilidades de Byakugan.");
+} else if (message === "qual o seu nome" || message === "Como qual é o seu nome?") {
+			sendBotMessage("O meu nome é Hinata");
+} else if (message === "qual teu nome" || message === "qual é o teu nome") {
+			sendBotMessage("O meu nome é Hinata!");
+} else if (message === "qual seu nome" || message === "qual teu nome") {
+			sendBotMessage("O meu nome é Hinata!");
+		} else {
+			sendBotMessage("Desculpe, eu não entendi o que você quis dizer...");
+		}
+	}
+
+</script>
+
+<ol>
+  <li>Qual o seu nome?</li>
+  <li>Qual sua cor favorita</li>
+  <li>Como você tá</li>
+  <li>mds</li>
+<li> você gosta de ramen </li>
+  <li>Kagaro Nakama</li>
+  <li>Qual o teu time</li>
+  <li>Vamos sair e tomar um açaí na quarta feira</li>
+  <li>É verdade que o Naruto morreu?</li>
+  <li>Como tá o Boruto?</li>
+  <li>Pedra, papel e tesoura</li>
+<li>me manda uma foto sua</li>
+<li>Qual a sua comida favorita?</li>
+<li> blz </li>
+<li> o que você gosta de fazer</li>
+<li> Qual o seu sonho mais louco?</li>
+<li> onde você nasceu? </li>
+<li> ChatGPT </li>
+<li> o que você gosta de fazer nas horas livres? </li>
+<li> você gosta de música? </li>
+<li> qual é o seu animal favorito? </li>
+<li> o que você gosta de fazer nas horas livres? </li>
+<li> você gosta de cozinhar? </li>
+<li> eu gosto de sorvete </li>
+</ol>
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gerador de desenhos</title>
+  </head>
+  <body>
+    <h1>Gerador de desenhos</h1>
+    <p>Clique em "Gerar desenho" para criar um desenho aleatório.</p>
+    <button onclick="gerarDesenho()">Gerar desenho</button>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      function gerarDesenho() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Desenha o cabelo
+        const coresCabelo = ['#FF5733', '#FFE333', '#FF33E9', '#4B0082'];
+        const corCabelo = coresCabelo[Math.floor(Math.random() * coresCabelo.length)];
+        ctx.fillStyle = corCabelo;
+        ctx.fillRect(50, 50, 300, 100);
+        
+        // Desenha os olhos
+        const coresOlhos = ['#000000', '#7F00FF', '#008000', '#FFD700'];
+        const corOlhos = coresOlhos[Math.floor(Math.random() * coresOlhos.length)];
+        ctx.fillStyle = corOlhos;
+        ctx.fillRect(100, 150, 50, 50);
+        ctx.fillRect(250, 150, 50, 50);
+        
+        // Desenha a boca
+        const coresBoca = ['#FF0000', '#FF69B4', '#800000', '#FFA500'];
+        const corBoca = coresBoca[Math.floor(Math.random() * coresBoca.length)];
+        ctx.fillStyle = corBoca;
+        ctx.fillRect(150, 250, 100, 50);
+        
+        // Desenha as orelhas
+        const coresOrelhas = ['#FFC0CB', '#F0E68C', '#ADD8E6', '#F5DEB3'];
+        const corOrelhas = coresOrelhas[Math.floor(Math.random() * coresOrelhas.length)];
+        ctx.fillStyle = corOrelhas;
+        ctx.fillRect(25, 100, 25, 75);
+        ctx.fillRect(350, 100, 25, 75);
+        
+        // Desenha o nariz
+        const coresNariz = ['#FF5733', '#FFE333', '#FF33E9', '#4B0082'];
+        const corNariz = coresNariz[Math.floor(Math.random() * coresNariz.length)];
+        ctx.fillStyle = corNariz;
+        ctx.fillRect(200, 200, 25, 25);
+      }
+    </script>
+
+  </body>
+</html>
+
+ <form>
+  <input type="text" id="num1">
+  <input type="text" id="num2">
+  <br><br>
+  <input type="button" value="+" onclick="document.getElementById('resultado').value = parseInt(document.getElementById('num1').value) + parseInt(document.getElementById('num2').value);">
+  <input type="button" value="-" onclick="document.getElementById('resultado').value = parseInt(document.getElementById('num1').value) - parseInt(document.getElementById('num2').value);">
+  <input type="button" value="*" onclick="document.getElementById('resultado').value = parseInt(document.getElementById('num1').value) * parseInt(document.getElementById('num2').value);">
+  <input type="button" value="/" onclick="document.getElementById('resultado').value = parseInt(document.getElementById('num1').value) / parseInt(document.getElementById('num2').value);">
+  <br><br>
+  Resultado: <input type="text" id="resultado" disabled>
+</form>
+
+<form>
+  <input type="text" id="num3">
+  <input type="text" id="num4">
+  <br><br>
+  <input type="button" value="+" onclick="document.getElementById('resultado2').value = parseInt(document.getElementById('num3').value) + parseInt(document.getElementById('num4').value);">
+  <input type="button" value="-" onclick="document.getElementById('resultado2').value = parseInt(document.getElementById('num3').value) - parseInt(document.getElementById('num4').value);">
+  <input type="button" value="*" onclick="document.getElementById('resultado2').value = parseInt(document.getElementById('num3').value) * parseInt(document.getElementById('num4').value);">
+  <input type="button" value="/" onclick="document.getElementById('resultado2').value = parseInt(document.getElementById('num3').value) / parseInt(document.getElementById('num4').value);">
+  <br><br>
+  Resultado: <input type="text" id="resultado2" disabled>
+</form>
+
+
+<html>
+  <head>
+    <title>Gerador de Texto</title>
+  </head>
+  <body>
+    <h1>Bem-vindo ao Gerador de Texto</h1>
+    
+    <p>Texto Gerado:</p>
+    <p id="output"></p>
+
+
+    <button id="generate">Gerar História</button>
+    <br><br>
+    <p id="output"></p>
+    <script>
+      const generateBtn = document.querySelector("#generate");
+      const output = document.querySelector("#output");
+      generateBtn.addEventListener("click", function() {
+        const scenes = [
+          "Naruto se junta a um grupo de ninjas para completar uma missão.",
+          "Naruto e seus companheiros enfrentam desafios e superam obstáculos em sua jornada.",
+          "Naruto encontra e faz novos amigos enquanto cresce como ninja.",
+          "Naruto aprende novas técnicas e habilidades para se tornar mais forte.",
+          "Naruto e seus companheiros lutam para proteger a aldeia de ameaças externas."
+        ];
+        const randomScene = scenes[Math.floor(Math.random() * scenes.length)];
+        output.innerHTML = randomScene;
+      });
+    </script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teste de Matemática</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Teste de Matemática</h1>
+    <p>Tente resolver o problema abaixo:</p>
+    <div id="problem"></div>
+    <input type="text" id="answer" placeholder="Digite a resposta aqui" />
+    <button type="button" onclick="checkAnswer()">Verificar resposta</button>
+    <p id="result"></p>
+    <button type="button" onclick="skipQuestion()">Pular pergunta</button>
+    <p id="score"></p>
+    <button type="button" id="customize">Personalizar</button>
+    <div id="color-picker" style="display:none">
+      <p>Escolha uma cor:</p>
+<ul>
+  <li><button type="button" onclick="setColor('#ff0000')">Vermelho</button></li>
+  <li><button type="button" onclick="setColor('#00ff00')">Verde</button></li>
+  <li><button type="button" onclick="setColor('#0000ff')">Azul</button></li>
+  <li><button type="button" onclick="setColor('#ffff00')">Amarelo</button></li>
+  <li><button type="button" onclick="setColor('#ffa500')">Laranja</button></li>
+  <li><button type="button" onclick="setColor('#800080')">Roxo</button></li>
+  <li><button type="button" onclick="setColor('#000000')">Preto</button></li>
+  <li><button type="button" onclick="setColor('#ffffff')">Branco</button></li>
+  <li><button type="button" onclick="setColor('#fffafa')">Neve</button></li>
+  <li><button type="button" onclick="setColor('#f5f5f5')">Fumaça</button></li>
+</ul>
+
+    </div>
+<script>
+  let correctAnswer;
+  let score = 0;
+
+  function generateProblem() {
+    let operators = ["+", "-", "*", "/", "sqrt"];
+    let operator = operators[Math.floor(Math.random() * operators.length)];
+    let a = Math.floor(Math.random() * 101);
+    let b = Math.floor(Math.random() * 101) + 1;
+    let problem;
+
+    switch (operator) {
+      case "+":
+        problem = `${a} + ${b} = `;
+        correctAnswer = a + b;
+        break;
+      case "-":
+        problem = `${a} - ${b} = `;
+        correctAnswer = a - b;
+        break;
+      case "*":
+        problem = `${a} x ${b} = `;
+        correctAnswer = a * b;
+        break;
+      case "/":
+        problem = `${a * b} / ${b} = `;
+        correctAnswer = a;
+        break;
+      case "sqrt":
+        problem = `sqrt(${a * a}) = `;
+        correctAnswer = a;
+        break;
+    }
+
+    $("#problem").html(problem);
+    $("#answer").val("");
+    $("#answer").focus();
+  }
+
+ function checkAnswer() {
+  let answer = $("#answer").val();
+
+  if (answer == correctAnswer) {
+    $("#result").html("Parabéns, você acertou!");
+    score++;
+  } else {
+    $("#result").html("Ops, tente novamente!");
+    score--;
+  }
+
+  $("#score").html(`Pontuação: ${score}`);
+  generateProblem();
+}
+
+function skipQuestion() {
+  score--;
+  generateProblem();
+}
+
+
+  function setColor(color) {
+    $("body").css("background-color", color);
+    $("#color-picker").hide();
+  }
+
+  $(document).ready(function () {
+    $("#customize").click(function () {
+      $("#color-picker").show();
+    });
+  });
+
+  $(window).on("load", function () {
+    generateProblem();
+  });
+</script>
+
+<img src="logo-removebg-preview.png" alt="Gerador de Problemas">
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Alarme com som personalizado</title>
+  </head>
+  <body>
+    <h1>Alarme com som personalizado</h1>
+    <label for="tarefa">Tarefa:</label>
+    <input type="text" id="tarefa">
+    <br>
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora">
+    <br>
+    <label for="som">Escolha um som:</label>
+    <select id="som">
+      <option value="blind.mp3">Blinding Lights</option>
+      <option value="sirene.mp3">Sirene</option>
+      <option value="campainha.mp3">Campainha</option>
+    </select>
+    <br>
+    <button onclick="configurarAlarme()">Configurar alarme</button>
+    <br>
+    <button onclick="desativarAlarme()">Desativar alarme</button>
+    <script>
+      let alarmeId;
+      
+      function configurarAlarme() {
+        const tarefa = document.getElementById('tarefa').value;
+        const hora = document.getElementById('hora').value;
+        const som = document.getElementById('som').value;
+        
+        const agora = new Date();
+        const dataHoraAlarme = new Date(agora.toDateString() + ' ' + hora);
+        const tempoParaAlarme = dataHoraAlarme - agora;
+        
+        if (tempoParaAlarme < 0) {
+          alert('Hora inválida!');
+          return;
+        }
+        
+        alarmeId = setTimeout(function() {
+          alert(tarefa);
+          const audio = new Audio(som);
+          audio.play();
+        }, tempoParaAlarme);
+      }
+      
+      function desativarAlarme() {
+        clearTimeout(alarmeId);
+      }
+    </script>
+  </body>
+</html>
+
+
+
+  </body>
+</html>
