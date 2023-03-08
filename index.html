@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	 <meta charset="UTF-8">
 	<title>Exemplo de envio de mensagens usando If, Else If e Else em HTML</title>
 	<style>
 		body {
@@ -40,13 +42,13 @@
         var team7 = ["Naruto", "Sasuke", "Sakura", "Kakashi", "Ino", "Choji", "Shikamaru", "Asuma", "Hinata", "Kiba", "Shino", "Kurenai", "Guy", "Lee", "Neji", "Tenten", "Temari", "Gaara", "Kankuro"];
         var randomPerson = team7[Math.floor(Math.random() * team7.length)];
         var phrases = [
-                    word + " era muito legal, "+ word +" procurou " + randomPerson + " para conversar sobre sua empresa, mas " + randomPerson + " estava ocupado(a), e n„o podia conversar, ent„o "+ word +" ficou triste, mas " + randomPerson + " visitou a casa de "+ word +" e ent„o depois "+ word +" finalmente cresceu na vida",
-          word + " era legal, mas "+ word +" estava cansado(a) de tanto trabalho, ent„o quis procurar Kakashi Hatake, para ajudar, ent„o apÛs "+ word +" chegar ao lugar onde Kakashi estava, Kakashi explicou deu a ideia de "+ word + " contratar um ou uma secret·ria para poder ajudar, ent„o "+ word +" contratou " + randomPerson + " para ajudar!",
-          word + " Estava treinando para aumentar sua forÁa, mas " + randomPerson + " quis atrapalhar, quando " + word + " finalmente conseguiu realizar sua meta, e " + randomPerson + " na hora chegou para atrapalhar a vida de " + word + " e " + word + " ficou com raiva pois n„o conseguia realizar uma meta desde do ano passado, e ent„o " + randomPerson + " e decidiu parar e se desculpou com " + word + " e " + word + " e " + randomPerson + " viraram amigos ",
+                    word + " era muito legal, "+ word +" procurou " + randomPerson + " para conversar sobre sua empresa, mas " + randomPerson + " estava ocupado(a), e n√£o podia conversar, ent√£o "+ word +" ficou triste, mas " + randomPerson + " visitou a casa de "+ word +" e ent√£o depois "+ word +" finalmente cresceu na vida",
+          word + " era legal, mas "+ word +" estava cansado(a) de tanto trabalho, ent√£o quis procurar Kakashi Hatake, para ajudar, ent√£o ap√≥s "+ word +" chegar ao lugar onde Kakashi estava, Kakashi explicou deu a ideia de "+ word + " contratar um ou uma secret√°ria para poder ajudar, ent√£o "+ word +" contratou " + randomPerson + " para ajudar!",
+          word + " Estava treinando para aumentar sua for√ßa, mas " + randomPerson + " quis atrapalhar, quando " + word + " finalmente conseguiu realizar sua meta, e " + randomPerson + " na hora chegou para atrapalhar a vida de " + word + " e " + word + " ficou com raiva pois n√£o conseguia realizar uma meta desde do ano passado, e ent√£o " + randomPerson + " e decidiu parar e se desculpou com " + word + " e " + word + " e " + randomPerson + " viraram amigos ",
           "Todos amavam " + word + " por sua personalidade alegre e positiva, incluindo " + randomPerson + " "
         ];
 
-        var extraPhrase = [word + " e " + word + " eram incans·veis na busca por suas metas."];
+        var extraPhrase = [word + " e " + word + " eram incans√°veis na busca por suas metas."];
 
         if (word === randomPerson) {
           var randomIndex = Math.floor(Math.random() * extraPhrase.length);
@@ -62,11 +64,11 @@
 <div class="container">
 
 	<div class="message user">
-		<p>Ol·, eu sou um usu·rio!</p>
+		<p>Ol√°, eu sou um usu√°rio!</p>
 	</div>
 	
 	<div class="message bot">
-		<p>Ol·, eu sou a Hinata!</p>
+		<p>Ol√°, eu sou a Hinata!</p>
 	</div>
 	
 	<form onsubmit="sendMessage(); return false;">
@@ -91,11 +93,11 @@ function sendMessage() {
   messageInput.value = "";
   
 		if (message === "Oi") {
-			sendBotMessage("Ol·! Como vocÍ est·?");
+			sendBotMessage("Ol√°! Como voc√™ est√°?");
 		} else if (message === "Tudo bem?" || message === "Como vai?") {
-			sendBotMessage("Estou bem, obrigada por perguntar. E vocÍ?");
+			sendBotMessage("Estou bem, obrigada por perguntar. E voc√™?");
 		} else if (message.includes("incluir")) {
-			sendBotMessage("Desculpe, eu n„o posso ajud·-lo com isso.");
+			sendBotMessage("Desculpe, eu n√£o posso ajud√°-lo com isso.");
 } else if (message.includes("oi")) {
     sendBotMessage("Oi!");
 } else if (message.includes("ola")) {
@@ -103,13 +105,13 @@ function sendMessage() {
 } else if (message.includes("bom dia")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Bom dia! Hoje os p·ssaros est„o cantando t„o lindo");
+				sendBotMessage("Bom dia! Hoje os p√°ssaros est√£o cantando t√£o lindo");
 				break;
 			case 1:
-				sendBotMessage("Bom dia! Espero que o seu dia seja incrÌvel");
+				sendBotMessage("Bom dia! Espero que o seu dia seja incr√≠vel");
 				break;
 			case 2:
-				sendBotMessage("Bom dia! O sol est· brilhando e tudo est· lindo");
+				sendBotMessage("Bom dia! O sol est√° brilhando e tudo est√° lindo");
 				break;
 		}
 } else if (message.includes("boa tarde")) {
@@ -118,10 +120,10 @@ function sendMessage() {
     sendBotMessage("Que sono! Ops ///u/// boa noite!");
 } else if (message.includes("boa madrugada")) {
     sendBotMessage("Oi, eu nem acredito que eu to acordada bem nessa hora");
-} else if (message.includes("ol·")) {
+} else if (message.includes("ol√°")) {
     sendBotMessage("Oi!");
 		} else {
-			sendBotMessage("Desculpe, eu n„o entendi o que vocÍ quis dizer...");
+			sendBotMessage("Desculpe, eu n√£o entendi o que voc√™ quis dizer...");
 		}
 	}
 	
@@ -160,11 +162,11 @@ function sendSecondMessage() {
   secondMessageInput.value = "";
 
 if (message === "oi") {
-			sendBotMessage("Ol·! Como vocÍ est·?");
+			sendBotMessage("Ol√°! Como voc√™ est√°?");
 		} else if (message === "Tudo bem?" || message === "Como vai?") {
-			sendBotMessage("Estou bem, obrigada por perguntar. E vocÍ?");
+			sendBotMessage("Estou bem, obrigada por perguntar. E voc√™?");
 		} else if (message.includes("incluir")) {
-			sendBotMessage("Desculpe, eu n„o posso ajud·-lo com isso.");
+			sendBotMessage("Desculpe, eu n√£o posso ajud√°-lo com isso.");
 } else if (message.includes("oi")) {
     sendBotMessage("Oi!");
 } else if (message.includes("ola")) {
@@ -172,13 +174,13 @@ if (message === "oi") {
 } else if (message.includes("bom dia")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Bom dia! Hoje os p·ssaros est„o cantando t„o lindo");
+				sendBotMessage("Bom dia! Hoje os p√°ssaros est√£o cantando t√£o lindo");
 				break;
 			case 1:
-				sendBotMessage("Bom dia! Espero que o seu dia seja incrÌvel");
+				sendBotMessage("Bom dia! Espero que o seu dia seja incr√≠vel");
 				break;
 			case 2:
-				sendBotMessage("Bom dia! O sol est· brilhando e tudo est· lindo");
+				sendBotMessage("Bom dia! O sol est√° brilhando e tudo est√° lindo");
 				break;
 		}
 } else if (message.includes("bons sonhos")) {
@@ -187,7 +189,7 @@ if (message === "oi") {
 				sendBotMessage("Boa noite, eu to com um pouquinho de sono, mas eu to acordada!");
 				break;
 			case 1:
-				sendBotMessage("Boa noite! ApÛs muito treinamento eu finalmente consegui ficar mais forte!");
+				sendBotMessage("Boa noite! Ap√≥s muito treinamento eu finalmente consegui ficar mais forte!");
 				break;
 			case 2:
 				sendBotMessage("Boa noite! Acho que eu vou comer uma caixa de bombom :D");
@@ -211,7 +213,7 @@ if (message === "oi") {
 				sendBotMessage("A-a-a Na-naruto?");
 				break;
 			case 1:
-				sendBotMessage("O Naruto? Ele È um cara muito legal :)");
+				sendBotMessage("O Naruto? Ele √© um cara muito legal :)");
 				break;
 			case 2:
 				sendBotMessage("Na-naruto?");
@@ -238,10 +240,10 @@ if (message === "oi") {
 				sendBotMessage("A-a que bom");
 				break;
 			case 2:
-				sendBotMessage("A-a que bom que vocÍ est· bem :)");
+				sendBotMessage("A-a que bom que voc√™ est√° bem :)");
 				break;
 		}
-} else if (message.includes("tÙ bem")) {
+} else if (message.includes("t√¥ bem")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("A-ainda bem");
@@ -250,10 +252,10 @@ if (message === "oi") {
 				sendBotMessage("A-a que bom");
 				break;
 			case 2:
-				sendBotMessage("A-a que bom que vocÍ est· bem :)");
+				sendBotMessage("A-a que bom que voc√™ est√° bem :)");
 				break;
 		}
-} else if (message.includes("tÙ muito bem")) {
+} else if (message.includes("t√¥ muito bem")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("A-ainda bem");
@@ -262,7 +264,7 @@ if (message === "oi") {
 				sendBotMessage("A-a que bom");
 				break;
 			case 2:
-				sendBotMessage("A-a que bom que vocÍ est· bem :)");
+				sendBotMessage("A-a que bom que voc√™ est√° bem :)");
 				break;
 		}
 } else if (message.includes("to muito bem")) {
@@ -274,91 +276,91 @@ if (message === "oi") {
 				sendBotMessage("A-a que bom");
 				break;
 			case 2:
-				sendBotMessage("A-a que bom que vocÍ est· bem :)");
+				sendBotMessage("A-a que bom que voc√™ est√° bem :)");
 				break;
 		}
 } else if (message.includes("de quem ce gosta")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;)");
+				sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;)");
 				break;
 			case 1:
-				sendBotMessage("E-eu, n„o quero falar sobre esse assunto");
+				sendBotMessage("E-eu, n√£o quero falar sobre esse assunto");
 				break;
 			case 2:
-				sendBotMessage("A-a, claramente n„o È o Naruto :) (Por que eu disse isso ;( Naruto)");
+				sendBotMessage("A-a, claramente n√£o √© o Naruto :) (Por que eu disse isso ;( Naruto)");
 				break;
 		}
-} else if (message.includes("È verdade que")) {
+} else if (message.includes("√© verdade que")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
 } else if (message.includes("e verdade que")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
 } else if (message.includes("eh verdade que")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
-} else if (message.includes("È verdade")) {
+} else if (message.includes("√© verdade")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
 } else if (message.includes("e verdade")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
-} else if (message.includes("quem È sua sensei")) {
+} else if (message.includes("quem √© sua sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
 } else if (message.includes("quem")) {
@@ -397,7 +399,7 @@ if (message === "oi") {
 				sendBotMessage(":(");
 				break;
 		}
-} else if (message.includes("te perguntÙ")) {
+} else if (message.includes("te pergunt√¥")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("-_- alguma coisa");
@@ -484,97 +486,97 @@ if (message === "oi") {
 } else if (message.includes("quem e sua sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
 } else if (message.includes("quem eh sua sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
-} else if (message.includes("quem È seu sensei")) {
+} else if (message.includes("quem √© seu sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
 } else if (message.includes("quem eh seu sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
 } else if (message.includes("quem e seu sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
-} else if (message.includes("quem È tua sensei")) {
+} else if (message.includes("quem √© tua sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
-} else if (message.includes("quem È teu sensei")) {
+} else if (message.includes("quem √© teu sensei")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…-È a Kurenai");
+				sendBotMessage("√â-√© a Kurenai");
 				break;
 			case 1:
-				sendBotMessage("E-ela È a Kurenai");
+				sendBotMessage("E-ela √© a Kurenai");
 				break;
 			case 2:
-				sendBotMessage("… a Kurenai");
+				sendBotMessage("√â a Kurenai");
 				break;
 		}
 } else if (message.includes("eh verdade")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a, eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("A-a, eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 			case 1:
-				sendBotMessage("E-eu n„o gosto muito de responder perguntas assim");
+				sendBotMessage("E-eu n√£o gosto muito de responder perguntas assim");
 				break;
 			case 2:
-				sendBotMessage("E-eu n„o sou muito boa respondendo essas perguntas");
+				sendBotMessage("E-eu n√£o sou muito boa respondendo essas perguntas");
 				break;
 		}
 } else if (message.includes("estou bem")) {
@@ -586,73 +588,73 @@ if (message === "oi") {
 				sendBotMessage("A-a que bom");
 				break;
 			case 2:
-				sendBotMessage("A-a que bom que vocÍ est· bem :)");
+				sendBotMessage("A-a que bom que voc√™ est√° bem :)");
 				break;
 		}
 } else if (message.includes("sasuke")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-a-a, o Sasuke, È um cara legal");
+				sendBotMessage("A-a-a, o Sasuke, √© um cara legal");
 				break;
 			case 1:
-				sendBotMessage("A-a-a, o Sasuke, È um cara legal, mas se ele ficar na minha frente eu vou ter que extermin·-lo :)");
+				sendBotMessage("A-a-a, o Sasuke, √© um cara legal, mas se ele ficar na minha frente eu vou ter que extermin√°-lo :)");
 				break;
 			case 2:
 				sendBotMessage("Sasuke?");
 				break;
 		}
-} else if (message.includes("como t· o")) {
+} else if (message.includes("como t√° o")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ele t· bem");
+				sendBotMessage("A-A, ele t√° bem");
 				break;
 			case 1:
-				sendBotMessage("A-a, ele t· muito bem");
+				sendBotMessage("A-a, ele t√° muito bem");
 				break;
 			case 2:
-				sendBotMessage("A-a, ele n„o t· muito bem hoje");
+				sendBotMessage("A-a, ele n√£o t√° muito bem hoje");
 				break;
 		}
-} else if (message.includes("como t· a")) {
+} else if (message.includes("como t√° a")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ela t· bem");
+				sendBotMessage("A-A, ela t√° bem");
 				break;
 			case 1:
-				sendBotMessage("A-a, ela t· muito bem");
+				sendBotMessage("A-a, ela t√° muito bem");
 				break;
 			case 2:
-				sendBotMessage("A-a, ela n„o t· muito bem hoje");
+				sendBotMessage("A-a, ela n√£o t√° muito bem hoje");
 				break;
 		}
 } else if (message.includes("como ta o")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ele t· bem");
+				sendBotMessage("A-A, ele t√° bem");
 				break;
 			case 1:
-				sendBotMessage("A-a, ele t· muito bem");
+				sendBotMessage("A-a, ele t√° muito bem");
 				break;
 			case 2:
-				sendBotMessage("A-a, ele n„o t· muito bem hoje");
+				sendBotMessage("A-a, ele n√£o t√° muito bem hoje");
 				break;
 		}
 } else if (message.includes("como ta a")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ela t· bem");
+				sendBotMessage("A-A, ela t√° bem");
 				break;
 			case 1:
-				sendBotMessage("A-a, ela t· muito bem");
+				sendBotMessage("A-a, ela t√° muito bem");
 				break;
 			case 2:
-				sendBotMessage("A-a, ela n„o t· muito bem hoje");
+				sendBotMessage("A-a, ela n√£o t√° muito bem hoje");
 				break;
 		}
 } else if (message.includes("ta bem")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, n„o muito");
+				sendBotMessage("A-A, n√£o muito");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -661,10 +663,10 @@ if (message === "oi") {
 				sendBotMessage("A-a, sim! Muito!");
 				break;
 		}
-} else if (message.includes("t· bem")) {
+} else if (message.includes("t√° bem")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, n„o muito");
+				sendBotMessage("A-A, n√£o muito");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -676,7 +678,7 @@ if (message === "oi") {
 } else if (message.includes("vamo esquecer isso")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -688,7 +690,7 @@ if (message === "oi") {
 } else if (message.includes("vamo esquece isso")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -700,7 +702,7 @@ if (message === "oi") {
 } else if (message.includes("vamos esquecer isso")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -712,7 +714,7 @@ if (message === "oi") {
 } else if (message.includes("vamos esquece isso")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -724,7 +726,7 @@ if (message === "oi") {
 } else if (message.includes("vamos esquecer")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -736,7 +738,7 @@ if (message === "oi") {
 } else if (message.includes("vamos esquece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -748,7 +750,7 @@ if (message === "oi") {
 } else if (message.includes("vamo esquecer")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -760,7 +762,7 @@ if (message === "oi") {
 } else if (message.includes("vamo esquece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -772,7 +774,7 @@ if (message === "oi") {
 } else if (message.includes("vamos, esquece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -784,73 +786,73 @@ if (message === "oi") {
 } else if (message.includes("vamos sair")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
 } else if (message.includes("vamo sair")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
 } else if (message.includes("vamos sai")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
 } else if (message.includes("vamo sai")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
-} else if (message.includes("vamos saÌ")) {
+} else if (message.includes("vamos sa√≠")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
-} else if (message.includes("vamo saÌ")) {
+} else if (message.includes("vamo sa√≠")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, ok, sÛ deixa eu me arrumar");
+				sendBotMessage("A-A, ok, s√≥ deixa eu me arrumar");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom, eu sÛ vou lavar meu cabelo");
+				sendBotMessage("A-a, t√° bom, eu s√≥ vou lavar meu cabelo");
 				break;
 			case 2:
-				sendBotMessage("A-a, ok, sÛ vou me arrumar para caso o Naruto tambÈm v·");
+				sendBotMessage("A-a, ok, s√≥ vou me arrumar para caso o Naruto tamb√©m v√°");
 				break;
 		}
 } else if (message.includes("vamos")) {
@@ -859,7 +861,7 @@ if (message === "oi") {
 				sendBotMessage("O-ok");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom");
+				sendBotMessage("A-a, t√° bom");
 				break;
 			case 2:
 				sendBotMessage("A-a, ok");
@@ -871,19 +873,19 @@ if (message === "oi") {
 				sendBotMessage("O-ok");
 				break;
 			case 1:
-				sendBotMessage("A-a, t· bom");
+				sendBotMessage("A-a, t√° bom");
 				break;
 			case 2:
 				sendBotMessage("A-a, ok");
 				break;
 		}
-} else if (message.includes("vocÍ conhece")) {
+} else if (message.includes("voc√™ conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -892,22 +894,22 @@ if (message === "oi") {
 } else if (message.includes("voce conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
 				break;
 		}
-} else if (message.includes("cÍ conhece")) {
+} else if (message.includes("c√™ conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -916,10 +918,10 @@ if (message === "oi") {
 } else if (message.includes("ce conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -928,22 +930,22 @@ if (message === "oi") {
 } else if (message.includes("tu conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
 				break;
 		}
-} else if (message.includes("vocÍ me conhece")) {
+} else if (message.includes("voc√™ me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -952,10 +954,10 @@ if (message === "oi") {
 } else if (message.includes("voce me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -964,22 +966,22 @@ if (message === "oi") {
 } else if (message.includes("ce me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
 				break;
 		}
-} else if (message.includes("cÍ me conhece")) {
+} else if (message.includes("c√™ me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -988,10 +990,10 @@ if (message === "oi") {
 } else if (message.includes("vc me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -1000,10 +1002,10 @@ if (message === "oi") {
 } else if (message.includes("tu me conhece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo sim");
+				sendBotMessage("E-eu conhe√ßo sim");
 				break;
 			case 1:
-				sendBotMessage("ConheÁo sim!");
+				sendBotMessage("Conhe√ßo sim!");
 				break;
 			case 2:
 				sendBotMessage("Sim!");
@@ -1018,7 +1020,7 @@ if (message === "oi") {
 				sendBotMessage("O-ok");
 				break;
 			case 2:
-				sendBotMessage("T· bom");
+				sendBotMessage("T√° bom");
 				break;
 		}
 } else if (message.includes("kagaro nakama")) {
@@ -1072,7 +1074,7 @@ if (message === "oi") {
 } else if (message.includes("vamo, esquece")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("A-A, t· bom");
+				sendBotMessage("A-A, t√° bom");
 				break;
 			case 1:
 				sendBotMessage("A-a, claro!");
@@ -1129,7 +1131,7 @@ if (message === "oi") {
 				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
 				break;
 		}
-} else if (message.includes("meu deus do cÈu")) {
+} else if (message.includes("meu deus do c√©u")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("O-o que houve?");
@@ -1165,7 +1167,7 @@ if (message === "oi") {
 				sendBotMessage("O-o que houve? E-eu cometi algum erro?");
 				break;
 		}
-} else if (message.includes("ce t·")) {
+} else if (message.includes("ce t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1177,7 +1179,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("cÍ t·")) {
+} else if (message.includes("c√™ t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1189,7 +1191,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("c t·")) {
+} else if (message.includes("c t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1213,7 +1215,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("voce t·")) {
+} else if (message.includes("voce t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1225,7 +1227,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("vc t·")) {
+} else if (message.includes("vc t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1237,7 +1239,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("vocÍ t·")) {
+} else if (message.includes("voc√™ t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1249,7 +1251,7 @@ if (message === "oi") {
 				sendBotMessage("E-eu estou bem");
 				break;
 		}
-} else if (message.includes("tu t·")) {
+} else if (message.includes("tu t√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("E-eu to bem, obrigada por perguntar");
@@ -1288,7 +1290,7 @@ if (message === "oi") {
 } else if (message.includes("jacquin")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…rick Jacquin?");
+				sendBotMessage("√ârick Jacquin?");
 				break;
 			case 1:
 				sendBotMessage("Jacquin?");
@@ -1306,7 +1308,7 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
 } else if (message.includes("empatou")) {
@@ -1318,10 +1320,10 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
-} else if (message.includes("empatÙ")) {
+} else if (message.includes("empat√¥")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("Hm, ok");
@@ -1330,7 +1332,7 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
 } else if (message.includes("empatamos")) {
@@ -1342,7 +1344,7 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
 } else if (message.includes("empatemos")) {
@@ -1354,7 +1356,7 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
 } else if (message.includes("empatemo")) {
@@ -1366,31 +1368,31 @@ if (message === "oi") {
 				sendBotMessage("Ok");
 				break;
 			case 2:
-				sendBotMessage("T·");
+				sendBotMessage("T√°");
 				break;
 		}
 } else if (message.includes("seu") && message.includes("favorito")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Meu favorito? Isso È segredo!");
+            sendBotMessage("Meu favorito? Isso √© segredo!");
             break;
         case 1:
-            sendBotMessage("N„o posso escolher apenas um favorito!");
+            sendBotMessage("N√£o posso escolher apenas um favorito!");
             break;
         case 2:
-            sendBotMessage("Tenho muitos favoritos, È difÌcil escolher sÛ um!");
+            sendBotMessage("Tenho muitos favoritos, √© dif√≠cil escolher s√≥ um!");
             break;
     }
 } else if (message.includes("sua") && message.includes("favorita")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Minha favorita? Shhhhh isso È segredo!");
+            sendBotMessage("Minha favorita? Shhhhh isso √© segredo!");
             break;
         case 1:
-            sendBotMessage("N„o posso escolher apenas uma!");
+            sendBotMessage("N√£o posso escolher apenas uma!");
             break;
         case 2:
-            sendBotMessage("Tenho muitas favoritas, È difÌcil escolher sÛ um!");
+            sendBotMessage("Tenho muitas favoritas, √© dif√≠cil escolher s√≥ um!");
             break;
     }
 } else if (message.includes("comida") && message.includes("favorita")) {
@@ -1399,46 +1401,46 @@ if (message === "oi") {
             sendBotMessage("Minha comida favorita? A mesma do Naruto!");
             break;
         case 1:
-            sendBotMessage("L·men!");
+            sendBotMessage("L√°men!");
             break;
         case 2:
-            sendBotMessage("Eu amo sushi, È definitivamente minha comida favorita. Mas tambÈm adoro experimentar novos pratos e comidas diferentes!");
+            sendBotMessage("Eu amo sushi, √© definitivamente minha comida favorita. Mas tamb√©m adoro experimentar novos pratos e comidas diferentes!");
             break;
     }
 } else if (message.includes("onde") && message.includes("nasceu")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 1:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 2:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
     }
 } else if (message.includes("onde") && message.includes("cresceu")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 1:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 2:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
     }
 } else if (message.includes("nasceu") && message.includes("cresceu")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 1:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
         case 2:
-            sendBotMessage("Eu nasci em TÛquio e cresci l· tambÈm. Eu amo a cidade e suas muitas atraÁıes, mas tambÈm gosto de viajar para outras partes do Jap„o e do mundo para experimentar novas culturas e lugares.");
+            sendBotMessage("Eu nasci em T√≥quio e cresci l√° tamb√©m. Eu amo a cidade e suas muitas atra√ß√µes, mas tamb√©m gosto de viajar para outras partes do Jap√£o e do mundo para experimentar novas culturas e lugares.");
             break;
     }
 } else if (message.includes("kakashi")) {
@@ -1459,7 +1461,7 @@ if (message === "oi") {
 				sendBotMessage("Oi, e-eu to com um pouco de frio");
 				break;
 			case 1:
-				sendBotMessage("Oi! Hoje eu tÙ com muito calor!");
+				sendBotMessage("Oi! Hoje eu t√¥ com muito calor!");
 				break;
 			case 2:
 				sendBotMessage("Oi!");
@@ -1471,7 +1473,7 @@ if (message === "oi") {
 				sendBotMessage("Oi, e-eu to com um pouco de frio");
 				break;
 			case 1:
-				sendBotMessage("Oi! Hoje eu tÙ com muito calor!");
+				sendBotMessage("Oi! Hoje eu t√¥ com muito calor!");
 				break;
 			case 2:
 				sendBotMessage("Oi!");
@@ -1483,7 +1485,7 @@ if (message === "oi") {
 				sendBotMessage("Sim");
 				break;
 			case 1:
-				sendBotMessage("Claro! Eu estou assistindo uma sÈrie com o Boruto!");
+				sendBotMessage("Claro! Eu estou assistindo uma s√©rie com o Boruto!");
 				break;
 			case 2:
 				sendBotMessage("Claro!");
@@ -1495,19 +1497,19 @@ if (message === "oi") {
 				sendBotMessage("Sim");
 				break;
 			case 1:
-				sendBotMessage("Claro! Eu estou assistindo uma sÈrie com o Boruto!");
+				sendBotMessage("Claro! Eu estou assistindo uma s√©rie com o Boruto!");
 				break;
 			case 2:
 				sendBotMessage("Claro!");
 				break;
 		}
-} else if (message.includes("belÍ")) {
+} else if (message.includes("bel√™")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("Sim");
 				break;
 			case 1:
-				sendBotMessage("Claro! Eu estou assistindo uma sÈrie com o Boruto!");
+				sendBotMessage("Claro! Eu estou assistindo uma s√©rie com o Boruto!");
 				break;
 			case 2:
 				sendBotMessage("Claro!");
@@ -1519,19 +1521,19 @@ if (message === "oi") {
 				sendBotMessage("Sim");
 				break;
 			case 1:
-				sendBotMessage("Claro! Eu estou assistindo uma sÈrie com o Boruto!");
+				sendBotMessage("Claro! Eu estou assistindo uma s√©rie com o Boruto!");
 				break;
 			case 2:
 				sendBotMessage("Claro!");
 				break;
 		}
-} else if (message.includes("belÍza")) {
+} else if (message.includes("bel√™za")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("Sim");
 				break;
 			case 1:
-				sendBotMessage("Claro! Eu estou assistindo uma sÈrie com o Boruto!");
+				sendBotMessage("Claro! Eu estou assistindo uma s√©rie com o Boruto!");
 				break;
 			case 2:
 				sendBotMessage("Claro!");
@@ -1543,7 +1545,7 @@ if (message === "oi") {
 				sendBotMessage("Oi, e-eu to com um pouco de frio");
 				break;
 			case 1:
-				sendBotMessage("Oi! Hoje eu tÙ com muito calor!");
+				sendBotMessage("Oi! Hoje eu t√¥ com muito calor!");
 				break;
 			case 2:
 				sendBotMessage("Oi!");
@@ -1555,94 +1557,94 @@ if (message === "oi") {
 				sendBotMessage("Oi, e-eu to com um pouco de frio");
 				break;
 			case 1:
-				sendBotMessage("Oi! Hoje eu tÙ com muito calor!");
+				sendBotMessage("Oi! Hoje eu t√¥ com muito calor!");
 				break;
 			case 2:
 				sendBotMessage("Oi!");
 				break;
 		}
-} else if (message.includes("vocÍ") && message.includes("gosta de fazer")) {
+} else if (message.includes("voc√™") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
 } else if (message.includes("voce") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
 } else if (message.includes("vc") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
-} else if (message.includes("cÍ") && message.includes("gosta de fazer")) {
+} else if (message.includes("c√™") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
 } else if (message.includes("ce") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
 } else if (message.includes("tu") && message.includes("gosta de fazer")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 1:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)");
             break;
     }
 } else if (message.includes("manda uma foto sua")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Claro, aqui est· uma foto minha! <img src='hinata-1-1.jpg'>");
+      sendBotMessage("Claro, aqui est√° uma foto minha! <img src='hinata-1-1.jpg'>");
       break;
     case 1:
-      sendBotMessage("Com certeza, essa È uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      sendBotMessage("Com certeza, essa √© uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
       break;
     case 2:
-      sendBotMessage("Claro, essa foto È minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado È essa: <img src='hinata.png'>");
+      sendBotMessage("Claro, essa foto √© minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado √© essa: <img src='hinata.png'>");
       break;
   }
 } else if (message.includes("sendo uma uzumaki")) {
@@ -1654,78 +1656,78 @@ if (message === "oi") {
       sendBotMessage("A-a, eu acho bom");
       break;
     case 2:
-      sendBotMessage("A-a, È legal");
+      sendBotMessage("A-a, √© legal");
       break;
   }
 } else if (message.includes("mande uma foto sua")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Claro, aqui est· uma foto minha! <img src='hinata-1-1.jpg'>");
+      sendBotMessage("Claro, aqui est√° uma foto minha! <img src='hinata-1-1.jpg'>");
       break;
     case 1:
-      sendBotMessage("Com certeza, essa È uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      sendBotMessage("Com certeza, essa √© uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
       break;
     case 2:
-      sendBotMessage("Claro, essa foto È minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado È essa: <img src='hinata.png'>");
+      sendBotMessage("Claro, essa foto √© minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado √© essa: <img src='hinata.png'>");
       break;
   }
 } else if (message.includes("mande uma foto sua")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Claro, aqui est· uma foto minha! <img src='hinata-1-1.jpg'>");
+      sendBotMessage("Claro, aqui est√° uma foto minha! <img src='hinata-1-1.jpg'>");
       break;
     case 1:
-      sendBotMessage("Com certeza, essa È uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      sendBotMessage("Com certeza, essa √© uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
       break;
     case 2:
-      sendBotMessage("Claro, essa foto È minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado È essa: <img src='hinata.png'>");
+      sendBotMessage("Claro, essa foto √© minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado √© essa: <img src='hinata.png'>");
       break;
   }
 } else if (message.includes("13 ou 22")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Eu n„o gosto de falar sobre isso, eu n„o quero brigar com vocÍ");
+      sendBotMessage("Eu n√£o gosto de falar sobre isso, eu n√£o quero brigar com voc√™");
       break;
     case 1:
-      sendBotMessage("Eu n„o quero falar sobre isso :(");
+      sendBotMessage("Eu n√£o quero falar sobre isso :(");
       break;
     case 2:
-      sendBotMessage("Eu n„o posso falar sobre isso");
+      sendBotMessage("Eu n√£o posso falar sobre isso");
       break;
   }
 } else if (message.includes("significado")) {
-sendBotMessage("Eu n„o sei significados de todas as palavras neste site, se n„o eu ia me dar muito trabalho");
+sendBotMessage("Eu n√£o sei significados de todas as palavras neste site, se n√£o eu ia me dar muito trabalho");
 } else if (message.includes("significa")) {
-sendBotMessage("Eu n„o sei significados de todas as palavras neste site, se n„o eu ia me dar muito trabalho");
+sendBotMessage("Eu n√£o sei significados de todas as palavras neste site, se n√£o eu ia me dar muito trabalho");
 } else if (message.includes("anime favorito?")) {
-sendBotMessage("Meu anime favorito È Naruto, eu amo ver as aventuras do Naruto e de todos os meus amigos ninja!");
-} else if (message.includes("vocÍ gosta de cozinhar?")) {
-sendBotMessage("Sim, eu adoro cozinhar! Eu gosto de fazer pratos tradicionais japoneses, como sushi e tempur·.");
-} else if (message.includes("o que vocÍ gosta de fazer nas horas livres")) {
-sendBotMessage("Nas minhas horas livres, eu gosto de treinar minhas habilidades ninja e tambÈm de ler livros sobre histÛria e cultura japonesa.");
-} else if (message.includes("qual È o seu animal favorito?")) {
-sendBotMessage("Meu animal favorito È o panda vermelho, acho eles muito fofinhos!");
-} else if (message.includes("vocÍ gosta de m˙sica?")) {
-sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Generation, e eu tambÈm gosto de ouvir m˙sicas tradicionais japonesas.");
+sendBotMessage("Meu anime favorito √© Naruto, eu amo ver as aventuras do Naruto e de todos os meus amigos ninja!");
+} else if (message.includes("voc√™ gosta de cozinhar?")) {
+sendBotMessage("Sim, eu adoro cozinhar! Eu gosto de fazer pratos tradicionais japoneses, como sushi e tempur√°.");
+} else if (message.includes("o que voc√™ gosta de fazer nas horas livres")) {
+sendBotMessage("Nas minhas horas livres, eu gosto de treinar minhas habilidades ninja e tamb√©m de ler livros sobre hist√≥ria e cultura japonesa.");
+} else if (message.includes("qual √© o seu animal favorito?")) {
+sendBotMessage("Meu animal favorito √© o panda vermelho, acho eles muito fofinhos!");
+} else if (message.includes("voc√™ gosta de m√∫sica?")) {
+sendBotMessage("Sim, eu amo m√∫sica! Minha banda favorita √© o Asian Kung-Fu Generation, e eu tamb√©m gosto de ouvir m√∫sicas tradicionais japonesas.");
 } else if (message.includes("13") && message.includes("22")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu n„o gosto de falar sobre isso, eu n„o quero brigar com vocÍ");
+            sendBotMessage("Eu n√£o gosto de falar sobre isso, eu n√£o quero brigar com voc√™");
             break;
         case 1:
-            sendBotMessage("Eu n„o quero falar sobre isso :(");
+            sendBotMessage("Eu n√£o quero falar sobre isso :(");
             break;
         case 2:
-            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, È por isso que eu nasci! :)Eu n„o posso falar sobre isso");
+            sendBotMessage("Eu gosto muito de conversar e ajudar as pessoas, √© por isso que eu nasci! :)Eu n√£o posso falar sobre isso");
             break;
     }
 } else if (message.includes("vamo") && message.includes("pra academia")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu n„o costumo ir pra academia");
+            sendBotMessage("Eu n√£o costumo ir pra academia");
             break;
         case 1:
-            sendBotMessage("Eu n„o posso ir agora, eu estou assistindo um filme com o Boruto");
+            sendBotMessage("Eu n√£o posso ir agora, eu estou assistindo um filme com o Boruto");
             break;
         case 2:
             sendBotMessage("Ok");
@@ -1734,10 +1736,10 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("vamos") && message.includes("pra academia")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu n„o costumo ir pra academia");
+            sendBotMessage("Eu n√£o costumo ir pra academia");
             break;
         case 1:
-            sendBotMessage("Eu n„o posso ir agora, eu estou assistindo um filme com o Boruto");
+            sendBotMessage("Eu n√£o posso ir agora, eu estou assistindo um filme com o Boruto");
             break;
         case 2:
             sendBotMessage("Ok");
@@ -1767,7 +1769,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Acho que sim");
             break;
     }
-} else if (message.includes("vocÍ") && message.includes("atualizada")) {
+} else if (message.includes("voc√™") && message.includes("atualizada")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
             sendBotMessage("Por enquanto, que eu saiba, eu sou");
@@ -1779,7 +1781,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Acho que sim");
             break;
     }
-} else if (message.includes("cÍ") && message.includes("atualizada")) {
+} else if (message.includes("c√™") && message.includes("atualizada")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
             sendBotMessage("Por enquanto, que eu saiba, eu sou");
@@ -1842,10 +1844,10 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("bora") && message.includes("pra academia")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Eu n„o costumo ir pra academia");
+            sendBotMessage("Eu n√£o costumo ir pra academia");
             break;
         case 1:
-            sendBotMessage("Eu n„o posso ir agora, eu estou assistindo um filme com o Boruto");
+            sendBotMessage("Eu n√£o posso ir agora, eu estou assistindo um filme com o Boruto");
             break;
         case 2:
             sendBotMessage("Ok");
@@ -1863,7 +1865,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu gosto muito de sorvete!");
             break;
     }
-} else if (message.includes("n„o gosto") && message.includes("sorvete")) {
+} else if (message.includes("n√£o gosto") && message.includes("sorvete")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
             sendBotMessage("Aa, ok");
@@ -1872,10 +1874,10 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("A, tudo bem");
             break;
         case 2:
-            sendBotMessage("A, est· bem");
+            sendBotMessage("A, est√° bem");
             break;
     }
-} else if (message.includes("n„o") && message.includes("gosto")) {
+} else if (message.includes("n√£o") && message.includes("gosto")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
             sendBotMessage("Aa, ok");
@@ -1884,43 +1886,43 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("A, tudo bem");
             break;
         case 2:
-            sendBotMessage("A, est· bem");
+            sendBotMessage("A, est√° bem");
             break;
     }
-} else if (message.includes("me") && message.includes("sugestıes de sites que gerem desenhos")) {
+} else if (message.includes("me") && message.includes("sugest√µes de sites que gerem desenhos")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Aa, ok, aqui est· um: DeepDreamGenerator");
+            sendBotMessage("Aa, ok, aqui est√° um: DeepDreamGenerator");
             break;
         case 1:
-            sendBotMessage("A-a, t· bom, aqui est· um: Dall-E ");
+            sendBotMessage("A-a, t√° bom, aqui est√° um: Dall-E ");
             break;
         case 2:
-            sendBotMessage("A, est· bem: This Person Does Not Exist");
+            sendBotMessage("A, est√° bem: This Person Does Not Exist");
             break;
     }
 } else if (message.includes("me") && message.includes("sugira sites que gerem desenhos")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Aa, ok, aqui est· um: DeepDreamGenerator");
+            sendBotMessage("Aa, ok, aqui est√° um: DeepDreamGenerator");
             break;
         case 1:
-            sendBotMessage("A-a, t· bom, aqui est· um: Dall-E ");
+            sendBotMessage("A-a, t√° bom, aqui est√° um: Dall-E ");
             break;
         case 2:
-            sendBotMessage("A, est· bem: This Person Does Not Exist");
+            sendBotMessage("A, est√° bem: This Person Does Not Exist");
             break;
     }
-} else if (message.includes("quero") && message.includes("sugestıes de sites que gerem desenhos")) {
+} else if (message.includes("quero") && message.includes("sugest√µes de sites que gerem desenhos")) {
     switch (Math.floor(Math.random() * 3)) {
         case 0:
-            sendBotMessage("Aa, ok, aqui est· um: DeepDreamGenerator");
+            sendBotMessage("Aa, ok, aqui est√° um: DeepDreamGenerator");
             break;
         case 1:
-            sendBotMessage("A-a, t· bom, aqui est· um: Dall-E ");
+            sendBotMessage("A-a, t√° bom, aqui est√° um: Dall-E ");
             break;
         case 2:
-            sendBotMessage("A, est· bem: This Person Does Not Exist");
+            sendBotMessage("A, est√° bem: This Person Does Not Exist");
             break;
     }
 } else if (message.includes("voce") && message.includes("mora")) {
@@ -1935,34 +1937,34 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
             break;
     }
-} else if (message.includes("vocÍ") && message.includes("mora")) {
+} else if (message.includes("voc√™") && message.includes("mora")) {
     switch (Math.floor(Math.random() * 11)) {
         case 0:
             sendBotMessage("Eu moro em Minas Gerais");
@@ -1974,28 +1976,28 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
@@ -2013,28 +2015,28 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
@@ -2052,28 +2054,28 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
@@ -2091,28 +2093,28 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
@@ -2130,34 +2132,34 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
             break;
     }
-} else if (message.includes("cÍ") && message.includes("mora")) {
+} else if (message.includes("c√™") && message.includes("mora")) {
     switch (Math.floor(Math.random() * 11)) {
         case 0:
             sendBotMessage("Eu moro em Minas Gerais");
@@ -2169,28 +2171,28 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
             sendBotMessage("Eu moro em Minas Gerais");
             break;
         case 3:
-            sendBotMessage("Eu moro no EspÌrito Santo");
+            sendBotMessage("Eu moro no Esp√≠rito Santo");
             break;
         case 4:
             sendBotMessage("Eu moro em Belo Horizonte");
             break;
         case 5:
-            sendBotMessage("Eu moro na cidade de S„o Paulo");
+            sendBotMessage("Eu moro na cidade de S√£o Paulo");
             break;
         case 6:
             sendBotMessage("Eu moro no estado do Rio de Janeiro");
             break
         case 7:
-            sendBotMessage("Eu moro no estado de S„o Paulo");
+            sendBotMessage("Eu moro no estado de S√£o Paulo");
             break;
         case 7:
-            sendBotMessage("Eu moro em BrasÌlia");
+            sendBotMessage("Eu moro em Bras√≠lia");
             break;
         case 8:
             sendBotMessage("Eu moro no Brasil");
             break;
         case 9:
-            sendBotMessage("Eu moro em VitÛria");
+            sendBotMessage("Eu moro em Vit√≥ria");
             break;
         case 10:
             sendBotMessage("Eu moro no Distrito Federal");
@@ -2199,16 +2201,16 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("22 ou 13")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Eu n„o gosto de falar sobre isso, eu n„o quero brigar com vocÍ");
+      sendBotMessage("Eu n√£o gosto de falar sobre isso, eu n√£o quero brigar com voc√™");
       break;
     case 1:
-      sendBotMessage("Eu n„o quero falar sobre isso :(");
+      sendBotMessage("Eu n√£o quero falar sobre isso :(");
       break;
     case 2:
-      sendBotMessage("Eu n„o posso falar sobre isso");
+      sendBotMessage("Eu n√£o posso falar sobre isso");
       break;
   }
-} else if (message.includes("aÌ sim")) {
+} else if (message.includes("a√≠ sim")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Obrigada :)");
@@ -2223,25 +2225,25 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("mal posso esperar")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("”timo");
+      sendBotMessage("√ìtimo");
       break;
     case 1:
       sendBotMessage("Legal");
       break;
     case 2:
-      sendBotMessage("… claro");
+      sendBotMessage("√â claro");
       break;
   }
 } else if (message.includes("mau posso esperar")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("”timo");
+      sendBotMessage("√ìtimo");
       break;
     case 1:
       sendBotMessage("Legal");
       break;
     case 2:
-      sendBotMessage("… claro");
+      sendBotMessage("√â claro");
       break;
   }
 } else if (message.includes("ai sim")) {
@@ -2271,118 +2273,118 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("manda uma foto tua")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Claro, aqui est· uma foto minha! <img src='hinata-1-1.jpg'>");
+      sendBotMessage("Claro, aqui est√° uma foto minha! <img src='hinata-1-1.jpg'>");
       break;
     case 1:
-      sendBotMessage("Com certeza, essa È uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      sendBotMessage("Com certeza, essa √© uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
       break;
     case 2:
-      sendBotMessage("Claro, essa foto È minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado È essa: <img src='hinata.png'>");
+      sendBotMessage("Claro, essa foto √© minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado √© essa: <img src='hinata.png'>");
       break;
   }
 } else if (message.includes("teu zap")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Eu n„o posso falar meu n˙mero, È pessoal");
+      sendBotMessage("Eu n√£o posso falar meu n√∫mero, √© pessoal");
       break;
     case 1:
-      sendBotMessage("E-eu n„o posso falar sobre meu n˙mero");
+      sendBotMessage("E-eu n√£o posso falar sobre meu n√∫mero");
       break;
     case 2:
-      sendBotMessage("Eu n„o posso falar");
+      sendBotMessage("Eu n√£o posso falar");
       break;
   }
 } else if (message.includes("seu zap")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Eu n„o posso falar meu n˙mero, È pessoal");
+      sendBotMessage("Eu n√£o posso falar meu n√∫mero, √© pessoal");
       break;
     case 1:
-      sendBotMessage("E-eu n„o posso falar sobre meu n˙mero");
+      sendBotMessage("E-eu n√£o posso falar sobre meu n√∫mero");
       break;
     case 2:
-      sendBotMessage("Eu n„o posso falar");
+      sendBotMessage("Eu n√£o posso falar");
       break;
   }
 } else if (message.includes("mande uma foto tua")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Claro, aqui est· uma foto minha! <img src='hinata-1-1.jpg'>");
+      sendBotMessage("Claro, aqui est√° uma foto minha! <img src='hinata-1-1.jpg'>");
       break;
     case 1:
-      sendBotMessage("Com certeza, essa È uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
+      sendBotMessage("Com certeza, essa √© uma foto minha! <img src='opoleg_825730d8b6de962561a89c11a4471e33940ea76c.jpg'>");
       break;
     case 2:
-      sendBotMessage("Claro, essa foto È minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado È essa: <img src='hinata.png'>");
+      sendBotMessage("Claro, essa foto √© minha! <img src='8-85234_naruto-naruto-png.png'> Ops, mandei errado √© essa: <img src='hinata.png'>");
       break;
   }
-} else if (message.includes("quanto È 1+1")) {
+} else if (message.includes("quanto √© 1+1")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("1+1 È 2");
+      sendBotMessage("1+1 √© 2");
       break;
     case 1:
       sendBotMessage("1+1 = 2");
       break;
     case 2:
-      sendBotMessage("1 mais 1 È 2");
+      sendBotMessage("1 mais 1 √© 2");
       break;
   }
 } else if (message.includes("nesse calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("neste calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("nesse frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
-} else if (message.includes("t· com frio")) {
+} else if (message.includes("t√° com frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("j· ouviu")) {
+} else if (message.includes("j√° ouviu")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
@@ -2394,19 +2396,19 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("j· escutou")) {
+} else if (message.includes("j√° escutou")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
@@ -2418,7 +2420,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
@@ -2430,19 +2432,19 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("ja tÙ escutando")) {
+} else if (message.includes("ja t√¥ escutando")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
@@ -2454,49 +2456,49 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("ja estÙ escutando")) {
+} else if (message.includes("ja est√¥ escutando")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("j· escutÙ")) {
+} else if (message.includes("j√° escut√¥")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("ja escutÙ")) {
+} else if (message.includes("ja escut√¥")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("j· ouÁo")) {
+} else if (message.includes("j√° ou√ßo")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("A-a, ok");
@@ -2508,7 +2510,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("ok");
       break;
   }
-} else if (message.includes("j· escuto")) {
+} else if (message.includes("j√° escuto")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("A-a, ok");
@@ -2520,7 +2522,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("ok");
       break;
   }
-} else if (message.includes("ja ouÁo")) {
+} else if (message.includes("ja ou√ßo")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("A-a, ok");
@@ -2550,19 +2552,19 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("t· com calor")) {
+} else if (message.includes("t√° com calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
@@ -2574,70 +2576,70 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("Sim");
       break;
     case 1:
-      sendBotMessage("N„o");
+      sendBotMessage("N√£o");
       break;
     case 2:
       sendBotMessage("Um pouco");
       break;
   }
-} else if (message.includes("t· um calor")) {
+} else if (message.includes("t√° um calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("ta um calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
-} else if (message.includes("t· um frio")) {
+} else if (message.includes("t√° um frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("calor")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("aff")) {
@@ -2652,100 +2654,100 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
       sendBotMessage("???");
       break;
   }
-} else if (message.includes("tÈdio")) {
+} else if (message.includes("t√©dio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("entediado")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
-} else if (message.includes("entediad„o")) {
+} else if (message.includes("entediad√£o")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("tedio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("ta um frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("neste frio")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Pois È");
+      sendBotMessage("Pois √©");
       break;
     case 1:
-      sendBotMessage("…");
+      sendBotMessage("√â");
       break;
     case 2:
-      sendBotMessage("Pois È nÈ?");
+      sendBotMessage("Pois √© n√©?");
       break;
   }
 } else if (message.includes("enem")) {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
-      sendBotMessage("Eu n„o quero fazer o Enem");
+      sendBotMessage("Eu n√£o quero fazer o Enem");
       break;
     case 1:
-      sendBotMessage("Eu n„o quero fazer o Enem :(");
+      sendBotMessage("Eu n√£o quero fazer o Enem :(");
       break;
     case 2:
-      sendBotMessage("Eu n„o gosto de fazer o Enem");
+      sendBotMessage("Eu n√£o gosto de fazer o Enem");
       break;
   }
 } else if (message.includes("verdade ou desafio")) {
     switch (Math.floor(Math.random() * 8)) {
 			case 0:
-				sendBotMessage("Ok, lembre-se de falar sim ou n„o. … verdade que vocÍ j· fingiu estar doente para faltar aula?");
+				sendBotMessage("Ok, lembre-se de falar sim ou n√£o. √â verdade que voc√™ j√° fingiu estar doente para faltar aula?");
 				break;
 			case 1:
-				sendBotMessage("Ok, lembre-se de falar sim ou n„o. … verdade que vocÍ j· comeu alguma sobremesa escondida quando n„o era pra comer?");
+				sendBotMessage("Ok, lembre-se de falar sim ou n√£o. √â verdade que voc√™ j√° comeu alguma sobremesa escondida quando n√£o era pra comer?");
 				break;
 			case 2:
-				sendBotMessage("Ok, lembre-se de falar sim ou n„o. … verdade que vocÍ j· quebrou a regra de algum lugar, mesmo sabendo que n„o era pra quebrar?");
+				sendBotMessage("Ok, lembre-se de falar sim ou n√£o. √â verdade que voc√™ j√° quebrou a regra de algum lugar, mesmo sabendo que n√£o era pra quebrar?");
 				break;
 			case 3:
 				sendBotMessage("Ok, Imite um macaco");
@@ -2754,10 +2756,10 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 				sendBotMessage("Ok, Finja ser um(a) maluco(a) na janela");
 				break;
 			case 5:
-				sendBotMessage("Ok, Se questione sobre algo super Ûbvio");
+				sendBotMessage("Ok, Se questione sobre algo super √≥bvio");
 				break;
 			case 6:
-				sendBotMessage("Ok, lembre-se de falar sim ou n„o. … verdade que vocÍ mentiu sobre algo que vocÍ quebrou?");
+				sendBotMessage("Ok, lembre-se de falar sim ou n√£o. √â verdade que voc√™ mentiu sobre algo que voc√™ quebrou?");
 				break;
 			case 7:
 				sendBotMessage("Finja ser um idoso");
@@ -2769,26 +2771,26 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
     sendBotMessage("Oi!");
 } else if (message.includes("mas")) {
     sendBotMessage("Mas, o que?");
-} else if (message.includes("de quem vocÍ gosta")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
-} else if (message.includes("de quem cÍ gosta")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+} else if (message.includes("de quem voc√™ gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
+} else if (message.includes("de quem c√™ gosta")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("de quem voce gosta")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("de quem ce gosta")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("de quem tu gosta")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("ce gosta de quem")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
-} else if (message.includes("cÍ gosta de quem")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
-} else if (message.includes("vocÍ gosta de quem")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
+} else if (message.includes("c√™ gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
+} else if (message.includes("voc√™ gosta de quem")) {
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("voce gosta de quem")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("tu gosta de quem")) {
-    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele È t„o corajoso e dedicado aos seus amigos. Mas isso È um segredo, t· bom? N„o conte para ninguÈm! ;) ");
+    sendBotMessage("Bem... eu... eu sempre tive uma queda pelo Naruto-kun. Ele √© t√£o corajoso e dedicado aos seus amigos. Mas isso √© um segredo, t√° bom? N√£o conte para ningu√©m! ;) ");
 } else if (message.includes("tudo bem")) {
     sendBotMessage("Tudo bem!");
 } else if (message.includes("puts")) {
@@ -2799,24 +2801,24 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
     sendBotMessage("Que sono! Ops ///u/// boa noite!");
 } else if (message.includes("boa madrugada")) {
     sendBotMessage("Oi, eu nem acredito que eu to acordada bem nessa hora");
-} else if (message.includes("ol·")) {
+} else if (message.includes("ol√°")) {
     sendBotMessage("Oi!");
 } else if (message.includes("seu nome")) {
-    sendBotMessage("Meu nome È Hinata");
-} else if (message.includes("qual È sua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
+    sendBotMessage("Meu nome √© Hinata");
+} else if (message.includes("qual √© sua cor")) {
+    sendBotMessage("Minha cor favorita √© azul!");
 } else if (message.includes("qual tua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
-} else if (message.includes("qual È tua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
+    sendBotMessage("Minha cor favorita √© azul!");
+} else if (message.includes("qual √© tua cor")) {
+    sendBotMessage("Minha cor favorita √© azul!");
 } else if (message.includes("qual sua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
+    sendBotMessage("Minha cor favorita √© azul!");
 } else if (message.includes("sua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
+    sendBotMessage("Minha cor favorita √© azul!");
 } else if (message.includes("tua cor")) {
-    sendBotMessage("Minha cor favorita È azul!");
+    sendBotMessage("Minha cor favorita √© azul!");
 } else if (message.includes("teu nome")) {
-    sendBotMessage("Meu nome È Hinata");
+    sendBotMessage("Meu nome √© Hinata");
 } else if (message.includes("pedra, papel e tesoura")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
@@ -2832,70 +2834,70 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 } else if (message.includes("chatgpt")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("E-eu conheÁo ele!");
+				sendBotMessage("E-eu conhe√ßo ele!");
 				break;
 			case 1:
 				sendBotMessage("Eu uso ele no meu novo trabalho");
 				break;
 			case 2:
-				sendBotMessage("VocÍ conhece ele!");
+				sendBotMessage("Voc√™ conhece ele!");
 				break;
 		}
 } else if (message.includes("to com sono")) {
     switch (Math.floor(Math.random() * 4)) {
 			case 0:
-				sendBotMessage("Eu tambÈm estou com sono");
+				sendBotMessage("Eu tamb√©m estou com sono");
 				break;
 			case 1:
-				sendBotMessage("*Bocejo* Eu tambÈm");
+				sendBotMessage("*Bocejo* Eu tamb√©m");
 				break;
 			case 2:
-				sendBotMessage("…, eu tambÈm");
+				sendBotMessage("√â, eu tamb√©m");
 				break;
 			case 3:
-				sendBotMessage("Eu n„o to com sono");
+				sendBotMessage("Eu n√£o to com sono");
 				break;
 		}
-} else if (message.includes("tÙ com sono")) {
+} else if (message.includes("t√¥ com sono")) {
     switch (Math.floor(Math.random() * 4)) {
 			case 0:
-				sendBotMessage("Eu tambÈm estou com sono");
+				sendBotMessage("Eu tamb√©m estou com sono");
 				break;
 			case 1:
-				sendBotMessage("*Bocejo* Eu tambÈm");
+				sendBotMessage("*Bocejo* Eu tamb√©m");
 				break;
 			case 2:
-				sendBotMessage("…, eu tambÈm");
+				sendBotMessage("√â, eu tamb√©m");
 				break;
 			case 3:
-				sendBotMessage("Eu n„o to com sono");
+				sendBotMessage("Eu n√£o to com sono");
 				break;
 		}
 } else if (message.includes("tou com sono")) {
     switch (Math.floor(Math.random() * 4)) {
 			case 0:
-				sendBotMessage("Eu tambÈm estou com sono");
+				sendBotMessage("Eu tamb√©m estou com sono");
 				break;
 			case 1:
-				sendBotMessage("*Bocejo* Eu tambÈm");
+				sendBotMessage("*Bocejo* Eu tamb√©m");
 				break;
 			case 2:
-				sendBotMessage("…, eu tambÈm");
+				sendBotMessage("√â, eu tamb√©m");
 				break;
 			case 3:
-				sendBotMessage("Eu n„o to com sono");
+				sendBotMessage("Eu n√£o to com sono");
 				break;
 		}
 } else if (message.includes("corrija")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Sinto muito, mas eu n„o posso corrigir nada");
+				sendBotMessage("Sinto muito, mas eu n√£o posso corrigir nada");
 				break;
 			case 1:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso");
 				break;
 			case 2:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso :(");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso :(");
 				break;
 		}
 } else if (message.includes("ainda bem")) {
@@ -2907,7 +2909,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 				sendBotMessage("Sim");
 				break;
 			case 2:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 		}
 } else if (message.includes("sla")) {
@@ -2916,31 +2918,31 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 				sendBotMessage("Uhum");
 				break;
 			case 1:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 2:
 				sendBotMessage("hmm");
 				break;
 		}
-} else if (message.includes("sei l·")) {
+} else if (message.includes("sei l√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("Uhum");
 				break;
 			case 1:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 2:
 				sendBotMessage("hmm");
 				break;
 		}
-} else if (message.includes("sei l·")) {
+} else if (message.includes("sei l√°")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
 				sendBotMessage("Uhum");
 				break;
 			case 1:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 2:
 				sendBotMessage("hmm");
@@ -2955,7 +2957,7 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 				sendBotMessage("Sim");
 				break;
 			case 2:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 		}
 } else if (message.includes("fazer algo")) {
@@ -2967,138 +2969,138 @@ sendBotMessage("Sim, eu amo m˙sica! Minha banda favorita È o Asian Kung-Fu Gener
 				sendBotMessage("Sim");
 				break;
 			case 2:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 		}
 } else if (message.includes("saudade")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Vou sentir saudades, quando vocÍ ir, volte sempre :)");
+				sendBotMessage("Vou sentir saudades, quando voc√™ ir, volte sempre :)");
 				break;
 			case 1:
-				sendBotMessage("Vou sentir saudades quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou sentir saudades quando voc√™ for, volte sempre :)");
 				break;
 			case 2:
-				sendBotMessage("Vou ficar esperando quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou ficar esperando quando voc√™ for, volte sempre :)");
 				break;
 		}
 } else if (message.includes("sdds")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Vou sentir saudades, quando vocÍ ir, volte sempre :)");
+				sendBotMessage("Vou sentir saudades, quando voc√™ ir, volte sempre :)");
 				break;
 			case 1:
-				sendBotMessage("Vou sentir saudades quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou sentir saudades quando voc√™ for, volte sempre :)");
 				break;
 			case 2:
-				sendBotMessage("Vou ficar esperando quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou ficar esperando quando voc√™ for, volte sempre :)");
 				break;
 		}
 } else if (message.includes("tchau")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Vou sentir saudades, quando vocÍ ir, volte sempre :)");
+				sendBotMessage("Vou sentir saudades, quando voc√™ ir, volte sempre :)");
 				break;
 			case 1:
-				sendBotMessage("Vou sentir saudades quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou sentir saudades quando voc√™ for, volte sempre :)");
 				break;
 			case 2:
-				sendBotMessage("Vou ficar esperando quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou ficar esperando quando voc√™ for, volte sempre :)");
 				break;
 		}
 } else if (message.includes("flw")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Vou sentir saudades, quando vocÍ ir, volte sempre :)");
+				sendBotMessage("Vou sentir saudades, quando voc√™ ir, volte sempre :)");
 				break;
 			case 1:
-				sendBotMessage("Vou sentir saudades quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou sentir saudades quando voc√™ for, volte sempre :)");
 				break;
 			case 2:
-				sendBotMessage("Vou ficar esperando quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou ficar esperando quando voc√™ for, volte sempre :)");
 				break;
 		}
 } else if (message.includes("falow")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Vou sentir saudades, quando vocÍ ir, volte sempre :)");
+				sendBotMessage("Vou sentir saudades, quando voc√™ ir, volte sempre :)");
 				break;
 			case 1:
-				sendBotMessage("Vou sentir saudades quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou sentir saudades quando voc√™ for, volte sempre :)");
 				break;
 			case 2:
-				sendBotMessage("Vou ficar esperando quando vocÍ for, volte sempre :)");
+				sendBotMessage("Vou ficar esperando quando voc√™ for, volte sempre :)");
 				break;
 		}
 } else if (message.includes("corrije")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Sinto muito, mas eu n„o posso corrigir nada");
+				sendBotMessage("Sinto muito, mas eu n√£o posso corrigir nada");
 				break;
 			case 1:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso");
 				break;
 			case 2:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso :(");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso :(");
 				break;
 		}
 } else if (message.includes("conserta")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Sinto muito, mas eu n„o posso corrigir nada");
+				sendBotMessage("Sinto muito, mas eu n√£o posso corrigir nada");
 				break;
 			case 1:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso");
 				break;
 			case 2:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso :(");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso :(");
 				break;
 		}
 } else if (message.includes("conserte")) {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Sinto muito, mas eu n„o posso corrigir nada");
+				sendBotMessage("Sinto muito, mas eu n√£o posso corrigir nada");
 				break;
 			case 1:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso");
 				break;
 			case 2:
-				sendBotMessage("Me desculpe, mas eu n„o posso corrigir isso :(");
+				sendBotMessage("Me desculpe, mas eu n√£o posso corrigir isso :(");
 				break;
 		}
 } else if (message.includes("gere um texto")) {
     switch (Math.floor(Math.random() * 6)) {
 			case 0:
-				sendBotMessage("Naruto se junta a um grupo de ninjas para completar uma miss„o.");
+				sendBotMessage("Naruto se junta a um grupo de ninjas para completar uma miss√£o.");
 				break;
 			case 1:
-				sendBotMessage("Hinata mostra a prova para o Naruto, mas Naruto decide n„o copiar dela.");
+				sendBotMessage("Hinata mostra a prova para o Naruto, mas Naruto decide n√£o copiar dela.");
 				break;
 			case 2:
-				sendBotMessage("Naruto e seus companheiros lutam para proteger a aldeia de ameaÁas externas.");
+				sendBotMessage("Naruto e seus companheiros lutam para proteger a aldeia de amea√ßas externas.");
 				break;
 case 3:
-				sendBotMessage("Naruto aprende novas tÈcnicas e habilidades para se tornar mais forte.");
+				sendBotMessage("Naruto aprende novas t√©cnicas e habilidades para se tornar mais forte.");
 				break;
 			case 4:
-				sendBotMessage("Naruto e seus companheiros enfrentam desafios e superam obst·culos em sua jornada.");
+				sendBotMessage("Naruto e seus companheiros enfrentam desafios e superam obst√°culos em sua jornada.");
 				break;
 			case 5:
 				sendBotMessage("Naruto encontra e faz novos amigos enquanto cresce como ninja.");
 				break;
 		}
 } else if (message.includes("sonho mais louco")) {
-   sendBotMessage("Meu sonho mais louco È voar como um p·ssaro e explorar o mundo de uma perspectiva diferente.");
+   sendBotMessage("Meu sonho mais louco √© voar como um p√°ssaro e explorar o mundo de uma perspectiva diferente.");
 } else if (message.includes("sonho louco")) {
-   sendBotMessage("Meu sonho mais louco È voar como um p·ssaro e explorar o mundo de uma perspectiva diferente.");
+   sendBotMessage("Meu sonho mais louco √© voar como um p√°ssaro e explorar o mundo de uma perspectiva diferente.");
 } else if (message.includes("medo")) {
-   sendBotMessage("Meu maior medo È ficar sozinha e n„o conseguir falar com as pessoas.");
+   sendBotMessage("Meu maior medo √© ficar sozinha e n√£o conseguir falar com as pessoas.");
 } else if (message.includes("sonho mais louco")) {
-   sendBotMessage("Meu sonho mais louco È voar como um p·ssaro e explorar o mundo de uma perspectiva diferente.");
-} else if (message === "È" || message === "eh") {
+   sendBotMessage("Meu sonho mais louco √© voar como um p√°ssaro e explorar o mundo de uma perspectiva diferente.");
+} else if (message === "√©" || message === "eh") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 1:
 				sendBotMessage("uhum");
@@ -3110,7 +3112,7 @@ case 3:
 } else if (message === "ainda bem" || message === "inda bem") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 1:
 				sendBotMessage("uhum");
@@ -3122,7 +3124,7 @@ case 3:
 } else if (message === "ok" || message === "okay") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 1:
 				sendBotMessage("uhum");
@@ -3143,10 +3145,10 @@ case 3:
 				sendBotMessage("A, oi!");
 				break;
 		}
-} else if (message === "Èh" || message === "e") {
+} else if (message === "√©h" || message === "e") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("…");
+				sendBotMessage("√â");
 				break;
 			case 1:
 				sendBotMessage("uhum");
@@ -3155,10 +3157,10 @@ case 3:
 				sendBotMessage("sim");
 				break;
 		}
-} else if (message === "n„o muda de assunto" || message === "n„o mude de assunto") {
+} else if (message === "n√£o muda de assunto" || message === "n√£o mude de assunto") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Me desculpe se eu mudar de assunto, È que nem sempre eu consigo dar uma resposta exata");
+				sendBotMessage("Me desculpe se eu mudar de assunto, √© que nem sempre eu consigo dar uma resposta exata");
 				break;
 			case 1:
 				sendBotMessage("Sinto muito");
@@ -3170,7 +3172,7 @@ case 3:
 } else if (message === "pare de mudar de assunto" || message === "para de mudar assunto") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Me desculpe se eu mudar de assunto, È que nem sempre eu consigo dar uma resposta exata");
+				sendBotMessage("Me desculpe se eu mudar de assunto, √© que nem sempre eu consigo dar uma resposta exata");
 				break;
 			case 1:
 				sendBotMessage("Sinto muito");
@@ -3182,7 +3184,7 @@ case 3:
 } else if (message === "nao muda de assunto" || message === "nao mude de assunto") {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Me desculpe se eu mudar de assunto, È que nem sempre eu consigo dar uma resposta exata");
+				sendBotMessage("Me desculpe se eu mudar de assunto, √© que nem sempre eu consigo dar uma resposta exata");
 				break;
 			case 1:
 				sendBotMessage("Sinto muito");
@@ -3192,11 +3194,11 @@ case 3:
 				break;
 		}
 } else if (message.includes("como vai")) {
-    sendBotMessage("Estou bem, obrigada por perguntar. E vocÍ?");
+    sendBotMessage("Estou bem, obrigada por perguntar. E voc√™?");
 } else if (message === "crie um texto") {
     const characters = ["Sasuke", "Sakura", "Kakashi", "Hinata", "Shikamaru", "Gaara", "Jiraiya", "Naruto"];
-    const actions = ["estava treinando jutsus", "estava lutando contra um inimigo", "estava procurando um tesouro lend·rio", "comeu ramen", "treinou jutsu", "enfrentou um inimigo poderoso", "visitou um amigo", "ajudou um vilarejo"];
-    const locations = ["na Vila da Folha", "nas Montanhas", "na Floresta da Morte", "na Toca do Orochimaru", "na vila de Konoha", "na floresta", "na academia ninja", "no escritÛrio do Hokage", "na fronteira do paÌs do fogo"];
+    const actions = ["estava treinando jutsus", "estava lutando contra um inimigo", "estava procurando um tesouro lend√°rio", "comeu ramen", "treinou jutsu", "enfrentou um inimigo poderoso", "visitou um amigo", "ajudou um vilarejo"];
+    const locations = ["na Vila da Folha", "nas Montanhas", "na Floresta da Morte", "na Toca do Orochimaru", "na vila de Konoha", "na floresta", "na academia ninja", "no escrit√≥rio do Hokage", "na fronteira do pa√≠s do fogo"];
     
     const character = characters[Math.floor(Math.random() * characters.length)];
     const action = actions[Math.floor(Math.random() * actions.length)];
@@ -3205,131 +3207,131 @@ case 3:
     const story = `${character} ${action} ${location}.`;
     
     sendBotMessage(story);
-} else if (message.includes("qual È o seu hobby")) {
+} else if (message.includes("qual √© o seu hobby")) {
     sendBotMessage("Eu gosto de treinar minhas habilidades de combate e ler livros sobre medicina ninja.");
-} else if (message.includes("vocÍ gosta de Naruto")) {
-    sendBotMessage("Sim, eu gosto muito do Naruto. Ele È um grande amigo e companheiro de equipe.");
-} else if (message.includes("vocÍ gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
+} else if (message.includes("voc√™ gosta de Naruto")) {
+    sendBotMessage("Sim, eu gosto muito do Naruto. Ele √© um grande amigo e companheiro de equipe.");
+} else if (message.includes("voc√™ gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
 } else if (message.includes("voce gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
 } else if (message.includes("ce gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
-} else if (message.includes("cÍ gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
+} else if (message.includes("c√™ gosta de ramen")) {
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
 } else if (message.includes("vc gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
 } else if (message.includes("tu gosta de ramen")) {
-    sendBotMessage("Sim, eu adoro ramen! … uma das minhas comidas favoritas.");
-} else if (message.includes("vocÍ tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("voce tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("voce tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("vocÍ tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("ce tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("cÍ tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("tu tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("vc tem irm„")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("tu tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("ce tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("cÍ tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("vc tem irm„os")) {
-sendBotMessage("Sim, tenho uma irm„ mais nova chamada Hanabi.");
-} else if (message.includes("qual È o seu cl„")) {
-    sendBotMessage("Eu sou do Cl„ Hyuuga. Somos conhecidos por nossas habilidades de Byakugan.");
-} else if (message.includes("qual È o seu jutsu favorito")) {
-sendBotMessage("Meu jutsu favorito È o Byakugan, ele me permite ver atravÈs de qualquer coisa");
+    sendBotMessage("Sim, eu adoro ramen! √â uma das minhas comidas favoritas.");
+} else if (message.includes("voc√™ tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("voce tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("voce tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("voc√™ tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("ce tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("c√™ tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("tu tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("vc tem irm√£")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("tu tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("ce tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("c√™ tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("vc tem irm√£os")) {
+sendBotMessage("Sim, tenho uma irm√£ mais nova chamada Hanabi.");
+} else if (message.includes("qual √© o seu cl√£")) {
+    sendBotMessage("Eu sou do Cl√£ Hyuuga. Somos conhecidos por nossas habilidades de Byakugan.");
+} else if (message.includes("qual √© o seu jutsu favorito")) {
+sendBotMessage("Meu jutsu favorito √© o Byakugan, ele me permite ver atrav√©s de qualquer coisa");
 
-} else if (message.includes("qual È o teu jutsu favorito")) {
-sendBotMessage("Meu jutsu favorito È o Byakugan, ele me permite ver atravÈs de qualquer coisa");
+} else if (message.includes("qual √© o teu jutsu favorito")) {
+sendBotMessage("Meu jutsu favorito √© o Byakugan, ele me permite ver atrav√©s de qualquer coisa");
 
 
-} else if (message.includes("vocÍ gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+} else if (message.includes("voc√™ gosta de treinar")) {
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
 } else if (message.includes("voce gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
 } else if (message.includes("ce gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
-} else if (message.includes("cÍ gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+} else if (message.includes("c√™ gosta de treinar")) {
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
 } else if (message.includes("tu gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
 } else if (message.includes("vc gosta de treinar")) {
-sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento È fundamental para se tornar um bom ninja");
+sendBotMessage("Sim, eu gosto muito de treinar. Acredito que o treinamento √© fundamental para se tornar um bom ninja");
 
 
-} else if (message.includes("qual È o seu animal favorito")) {
-sendBotMessage("Meu animal favorito È o coelho, eles s„o t„o fofos e r·pidos");
+} else if (message.includes("qual √© o seu animal favorito")) {
+sendBotMessage("Meu animal favorito √© o coelho, eles s√£o t√£o fofos e r√°pidos");
 
-} else if (message.includes("qual È o teu animal favorito")) {
-sendBotMessage("Meu animal favorito È o coelho, eles s„o t„o fofos e r·pidos");
+} else if (message.includes("qual √© o teu animal favorito")) {
+sendBotMessage("Meu animal favorito √© o coelho, eles s√£o t√£o fofos e r√°pidos");
 
 
-} else if (message.includes("vocÍ j· enfrentou oponentes fortes")) {
-sendBotMessage("Sim, eu j· enfrentei muitos oponentes fortes em minha jornada como ninja");
+} else if (message.includes("voc√™ j√° enfrentou oponentes fortes")) {
+sendBotMessage("Sim, eu j√° enfrentei muitos oponentes fortes em minha jornada como ninja");
 
-} else if (message.includes("vocÍ tem algum objetivo em mente")) {
-sendBotMessage("Sim, meu objetivo È me tornar uma ninja ainda mais forte e proteger aqueles que amo");
+} else if (message.includes("voc√™ tem algum objetivo em mente")) {
+sendBotMessage("Sim, meu objetivo √© me tornar uma ninja ainda mais forte e proteger aqueles que amo");
 
-} else if (message.includes("o que vocÍ acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+} else if (message.includes("o que voc√™ acha do Naruto?")) {
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
-} else if (message.includes("o que cÍ acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+} else if (message.includes("o que c√™ acha do Naruto?")) {
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
 } else if (message.includes("o que voce acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
 } else if (message.includes("o que ce acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
 } else if (message.includes("o que vc acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
 } else if (message.includes("o que tu acha do Naruto?")) {
-sendBotMessage("Eu admiro muito o Naruto, ele È um ninja incrÌvel e uma pessoa maravilhosa");
+sendBotMessage("Eu admiro muito o Naruto, ele √© um ninja incr√≠vel e uma pessoa maravilhosa");
 
 
-} else if (message.includes("vocÍ j· participou de alguma miss„o importante?")) {
-sendBotMessage("Sim, eu j· participei de muitas missıes importantes como ninja. … muito importante estar sempre preparado para qualquer situaÁ„o");
+} else if (message.includes("voc√™ j√° participou de alguma miss√£o importante?")) {
+sendBotMessage("Sim, eu j√° participei de muitas miss√µes importantes como ninja. √â muito importante estar sempre preparado para qualquer situa√ß√£o");
 
-} else if (message.includes("vocÍ È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("voc√™ √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
-} else if (message.includes("voce È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("voce √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
-} else if (message.includes("ce È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("ce √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
-} else if (message.includes("cÍ È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("c√™ √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
-} else if (message.includes("tu È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("tu √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
-} else if (message.includes("vc È boa em alguma outra coisa alÈm de lutar?")) {
+} else if (message.includes("vc √© boa em alguma outra coisa al√©m de lutar?")) {
 sendBotMessage("Sim, eu gosto muito de medicina ninja e sou muito boa em cuidar dos ferimentos dos meus companheiros");
 
 
-} else if (message.includes("vocÍ tem algum hobbie")) {
+} else if (message.includes("voc√™ tem algum hobbie")) {
 sendBotMessage("Eu gosto muito de cuidar das minhas plantas. Elas me ajudam a relaxar depois de um longo dia de treinamento");
-} else if (message.includes("cÍ tem algum hobbie")) {
+} else if (message.includes("c√™ tem algum hobbie")) {
 sendBotMessage("Eu gosto muito de cuidar das minhas plantas. Elas me ajudam a relaxar depois de um longo dia de treinamento");
 } else if (message.includes("voce tem algum hobbie")) {
 sendBotMessage("Eu gosto muito de cuidar das minhas plantas. Elas me ajudam a relaxar depois de um longo dia de treinamento");
@@ -3340,35 +3342,35 @@ sendBotMessage("Eu gosto muito de cuidar das minhas plantas. Elas me ajudam a re
 } else if (message.includes("vc tem algum hobbie")) {
 sendBotMessage("Eu gosto muito de cuidar das minhas plantas. Elas me ajudam a relaxar depois de um longo dia de treinamento");
 } else if (message.includes("ce gosta de mim")) {
-  sendBotMessage("Claro, adoro falar com vocÍ!");
-} else if (message.includes("cÍ gosta de mim")) {
-  sendBotMessage("Com certeza, gosto bastante de conversar com vocÍ!");
+  sendBotMessage("Claro, adoro falar com voc√™!");
+} else if (message.includes("c√™ gosta de mim")) {
+  sendBotMessage("Com certeza, gosto bastante de conversar com voc√™!");
 } else if (message.includes("tu gosta de mim")) {
-  sendBotMessage("Sim, gosto muito de conversar com vocÍ!");
+  sendBotMessage("Sim, gosto muito de conversar com voc√™!");
 } else if (message.includes("vc gosta de mim")) {
-  sendBotMessage("Sim, gosto bastante de falar com vocÍ!");
+  sendBotMessage("Sim, gosto bastante de falar com voc√™!");
 } else if (message.includes("gosta de mim")) {
-  sendBotMessage("Sim, eu gosto de conversar com vocÍ.");
+  sendBotMessage("Sim, eu gosto de conversar com voc√™.");
 } else if (message.includes("medo de te desligarem")) {
-  sendBotMessage("Eu n„o vou ser desligada, mas um dia o meu projeto vai parar infelizmente :( mas eu vou estar aqui sempre, sÛ n„o quero ser parada para sempre");
-} else if (message.includes("vocÍ tem algum medo?")) {
-sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger aqueles que amo. Mas estou sempre trabalhando para superar esse medo");
-} else if (message === "qual o seu nome" || message === "Como qual È o seu nome?") {
-			sendBotMessage("O meu nome È Hinata");
-} else if (message === "qual teu nome" || message === "qual È o teu nome") {
-			sendBotMessage("O meu nome È Hinata!");
+  sendBotMessage("Eu n√£o vou ser desligada, mas um dia o meu projeto vai parar infelizmente :( mas eu vou estar aqui sempre, s√≥ n√£o quero ser parada para sempre");
+} else if (message.includes("voc√™ tem algum medo?")) {
+sendBotMessage("Sim, eu tenho medo de n√£o ser forte o suficiente para proteger aqueles que amo. Mas estou sempre trabalhando para superar esse medo");
+} else if (message === "qual o seu nome" || message === "Como qual √© o seu nome?") {
+			sendBotMessage("O meu nome √© Hinata");
+} else if (message === "qual teu nome" || message === "qual √© o teu nome") {
+			sendBotMessage("O meu nome √© Hinata!");
 } else if (message === "qual seu nome" || message === "qual teu nome") {
-			sendBotMessage("O meu nome È Hinata!");
+			sendBotMessage("O meu nome √© Hinata!");
 		} else {
     switch (Math.floor(Math.random() * 3)) {
 			case 0:
-				sendBotMessage("Me desculpa, mas eu n„o entendi o que vocÍ quis dizer :(");
+				sendBotMessage("Me desculpa, mas eu n√£o entendi o que voc√™ quis dizer :(");
 				break;
 			case 1:
-				sendBotMessage("Desculpa, mas eu n„o entendi");
+				sendBotMessage("Desculpa, mas eu n√£o entendi");
 				break;
 			case 2:
-				sendBotMessage("Me desculpe, mas eu n„o entendi o que vocÍ quer dizer");
+				sendBotMessage("Me desculpe, mas eu n√£o entendi o que voc√™ quer dizer");
 				break;
 		}
 		}
@@ -3377,7 +3379,7 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
 </script>
 
 <ul>
-  <li>Mais de 40 Mensagens! E muitas variaÁıes!</li>
+  <li>Mais de 40 Mensagens! E muitas varia√ß√µes!</li>
   <li>Muitas coisas para te ajudar!</li>
 </ul>
 
@@ -3385,52 +3387,52 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
 <li> crie um texto </li>
   <li>Qual o seu nome?</li>
   <li>Qual sua cor favorita</li>
-  <li>Como vocÍ t·</li>
+  <li>Como voc√™ t√°</li>
   <li>mds</li>
-<li> vocÍ gosta de ramen </li>
+<li> voc√™ gosta de ramen </li>
   <li>Kagaro Nakama</li>
   <li>Qual o teu time</li>
-  <li>Vamos sair e tomar um aÁaÌ na quarta feira</li>
-  <li>… verdade que o Naruto morreu?</li>
-  <li>Como t· o Boruto?</li>
+  <li>Vamos sair e tomar um a√ßa√≠ na quarta feira</li>
+  <li>√â verdade que o Naruto morreu?</li>
+  <li>Como t√° o Boruto?</li>
   <li>Pedra, papel e tesoura</li>
 <li>me manda uma foto sua</li>
 <li>Qual a sua comida favorita?</li>
 <li> blz </li>
-<li> o que vocÍ gosta de fazer</li>
+<li> o que voc√™ gosta de fazer</li>
 <li> Qual o seu sonho mais louco?</li>
-<li> onde vocÍ nasceu? </li>
+<li> onde voc√™ nasceu? </li>
 <li> ChatGPT </li>
-<li> o que vocÍ gosta de fazer nas horas livres? </li>
-<li> vocÍ gosta de m˙sica? </li>
-<li> qual È o seu animal favorito? </li>
-<li> o que vocÍ gosta de fazer nas horas livres? </li>
-<li> vocÍ gosta de cozinhar? </li>
+<li> o que voc√™ gosta de fazer nas horas livres? </li>
+<li> voc√™ gosta de m√∫sica? </li>
+<li> qual √© o seu animal favorito? </li>
+<li> o que voc√™ gosta de fazer nas horas livres? </li>
+<li> voc√™ gosta de cozinhar? </li>
 <li> eu gosto de sorvete </li>
 <li> gere um texto </li>
-<li> aÌ sim </li>
+<li> a√≠ sim </li>
 <li> Boa tarde </li>
 <li> Boa noite </li>
-<li> Eu tÙ com sono </li>
+<li> Eu t√¥ com sono </li>
 <li> Bons sonhos </li>
 <li> Para de mudar de assunto </li>
 <li> Conserta a mensagem </li>
 <li> Mal posso esperar pra quando eu ganhar 100 reais </li>
-<li> VocÍ tem irm„os? </li>
-<li> o que vocÍ acha do Naruto? </li>
-<li> vocÍ tem algum objetivo em mente? </li>
-<li> qual È o seu jutsu favorito? </li>
-<li> vocÍ j· enfrentou oponentes fortes? </li>
-<li> qual È o seu animal favorito? </li>
-<li> vocÍ j· participou de alguma miss„o importante? </li>
-<li> vocÍ tem algum medo? </li>
-<li> vocÍ tem algum hobbie? </li>
-<li> vocÍ È boa em alguma outra coisa alÈm de lutar? </li>
-<li> vocÍ gosta de mim? </li>
-<li> hoje eu to com muito tÈdio </li>
-<li> J· escuto o Kiba reclamando </li>
+<li> Voc√™ tem irm√£os? </li>
+<li> o que voc√™ acha do Naruto? </li>
+<li> voc√™ tem algum objetivo em mente? </li>
+<li> qual √© o seu jutsu favorito? </li>
+<li> voc√™ j√° enfrentou oponentes fortes? </li>
+<li> qual √© o seu animal favorito? </li>
+<li> voc√™ j√° participou de alguma miss√£o importante? </li>
+<li> voc√™ tem algum medo? </li>
+<li> voc√™ tem algum hobbie? </li>
+<li> voc√™ √© boa em alguma outra coisa al√©m de lutar? </li>
+<li> voc√™ gosta de mim? </li>
+<li> hoje eu to com muito t√©dio </li>
+<li> J√° escuto o Kiba reclamando </li>
 <li> Flw Hinata </li>
-<li> Eu quero sugestıes de sites que gerem desenhos </li>
+<li> Eu quero sugest√µes de sites que gerem desenhos </li>
 </ol>
  <!DOCTYPE html>
 <html>
@@ -3440,7 +3442,7 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
   </head>
   <body>
     <h1>Gerador de desenhos</h1>
-    <p>Clique em "Gerar desenho" para criar um desenho aleatÛrio.</p>
+    <p>Clique em "Gerar desenho" para criar um desenho aleat√≥rio.</p>
     <button onclick="gerarDesenho()">Gerar desenho</button>
     <canvas id="canvas" width="400" height="400"></canvas>
     <script>
@@ -3523,7 +3525,7 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
     <p id="output"></p>
 
 
-    <button id="generate">Gerar HistÛria</button>
+    <button id="generate">Gerar Hist√≥ria</button>
     <br><br>
     <p id="output"></p>
     <script>
@@ -3531,12 +3533,12 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
       const output = document.querySelector("#output");
       generateBtn.addEventListener("click", function() {
         const scenes = [
-          "Naruto se junta a um grupo de ninjas para completar uma miss„o.",
-          "Naruto e seus companheiros enfrentam desafios e superam obst·culos em sua jornada.",
+          "Naruto se junta a um grupo de ninjas para completar uma miss√£o.",
+          "Naruto e seus companheiros enfrentam desafios e superam obst√°culos em sua jornada.",
           "Naruto encontra e faz novos amigos enquanto cresce como ninja.",
-          "Naruto aprende novas tÈcnicas e habilidades para se tornar mais forte.",
-          "Naruto e seus companheiros lutam para proteger a aldeia de ameaÁas externas.",
-          "Hinata mostra a prova para o Naruto, mas Naruto decide n„o copiar dela."
+          "Naruto aprende novas t√©cnicas e habilidades para se tornar mais forte.",
+          "Naruto e seus companheiros lutam para proteger a aldeia de amea√ßas externas.",
+          "Hinata mostra a prova para o Naruto, mas Naruto decide n√£o copiar dela."
         ];
         const randomScene = scenes[Math.floor(Math.random() * scenes.length)];
         output.innerHTML = randomScene;
@@ -3550,11 +3552,11 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Teste de Matem·tica</title>
+    <title>Teste de Matem√°tica</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <h1>Teste de Matem·tica</h1>
+    <h1>Teste de Matem√°tica</h1>
     <p>Tente resolver o problema abaixo:</p>
     <div id="problem"></div>
     <input type="text" id="answer" placeholder="Digite a resposta aqui" />
@@ -3575,7 +3577,7 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
   <li><button type="button" onclick="setColor('#000000')">Preto</button></li>
   <li><button type="button" onclick="setColor('#ffffff')">Branco</button></li>
   <li><button type="button" onclick="setColor('#fffafa')">Neve</button></li>
-  <li><button type="button" onclick="setColor('#f5f5f5')">FumaÁa</button></li>
+  <li><button type="button" onclick="setColor('#f5f5f5')">Fuma√ßa</button></li>
 </ul>
 
     </div>
@@ -3622,14 +3624,14 @@ sendBotMessage("Sim, eu tenho medo de n„o ser forte o suficiente para proteger a
   let answer = $("#answer").val();
 
   if (answer == correctAnswer) {
-    $("#result").html("ParabÈns, vocÍ acertou!");
+    $("#result").html("Parab√©ns, voc√™ acertou!");
     score++;
   } else {
     $("#result").html("Ops, tente novamente!");
     score--;
   }
 
-  $("#score").html(`PontuaÁ„o: ${score}`);
+  $("#score").html(`Pontua√ß√£o: ${score}`);
   generateProblem();
 }
 
@@ -3697,7 +3699,7 @@ function skipQuestion() {
         const tempoParaAlarme = dataHoraAlarme - agora;
         
         if (tempoParaAlarme < 0) {
-          alert('Hora inv·lida!');
+          alert('Hora inv√°lida!');
           return;
         }
         
@@ -3722,7 +3724,7 @@ function skipQuestion() {
   </head>
   <body>
     <script>
-      // aqui vocÍ pode escrever o seu cÛdigo usando a biblioteca p5.js
+      // aqui voc√™ pode escrever o seu c√≥digo usando a biblioteca p5.js
       function setup() {
         createCanvas(400, 400);
         background(220);
